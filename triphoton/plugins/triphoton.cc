@@ -160,10 +160,11 @@ iEvent.getByToken(photonsMiniAODToken_,photons);
           //print photon info
           cout << "Photon: " << "pt = " << pho->pt() << "; eta = " << pho->eta() << "; phi = " << pho->phi() << endl;
           //Here we're getting photon eta but we want to use photon detector/supercluster eta 
+         if (i== 1){
           fPhoton1Info.pt = pho->pt();
           fPhoton1Info.eta = pho->eta();
           fPhoton2Info.phi = pho->phi();
-
+         }
          if (i ==2){
            fPhoton2Info.pt= pho->pt();
            fPhoton2Info.eta = pho->eta();
