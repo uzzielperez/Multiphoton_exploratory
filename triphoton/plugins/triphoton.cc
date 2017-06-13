@@ -153,30 +153,62 @@ triphoton::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetup)
 
 edm::Handle<edm::View<pat::Photon>> photons;   //To get photon collection
 iEvent.getByToken(photonsMiniAODToken_,photons);
+  //Initializing photon variables 
+
+  fPhoton1Info.pt = -999;
+  fPhoton1Info.eta = -999;
+  fPhoton1Info.phi = -999;
+  fPhoton2Info.pt = -999;
+  fPhoton2Info.eta = -999;
+  fPhoton2Info.phi = -999;
+  fPhoton3Info.pt = -999;
+  fPhoton3Info.eta = -999;
+  fPhoton3Info.phi = -999;
+  float lead_photon_pt = 0; 
+
 
 //for (edm::View<pat::Photon>::const_iterator pho = photons->begin(); pho != photons->end(); ++pho) {
   for (size_t i = 0; i < photons->size(); ++i) { //loop over photon collection
       const auto pho = photons->ptrAt(i);
+          //photon_num = photons->size()
+          if (photons->size() > 2){
           //print photon info
-          cout << "Photon: " << "pt = " << pho->pt() << "; eta = " << pho->eta() << "; phi = " << pho->phi() << endl;
-          //Here we're getting photon eta but we want to use photon detector/supercluster eta 
-         if (i== 1){
-          fPhoton1Info.pt = pho->pt();
-          fPhoton1Info.eta = pho->eta();
-          fPhoton2Info.phi = pho->phi();
-         }
-         if (i ==2){
-           fPhoton2Info.pt= pho->pt();
-           fPhoton2Info.eta = pho->eta();
-           fPhoton2Info.phi = pho->phi();
-         } 
-         if (i==3){ 
-           fPhoton3Info.pt= pho->pt();
-           fPhoton3Info.eta = pho->eta();
-           fPhoton3Info.phi = pho->phi();
-        }
-  }
+        //cout << "Photon: " << "pt = " << pho->pt() << "; eta = " << pho->eta() << "; phi = " << pho->phi() << endl;
 
+          //Here we're getting photon eta but we want to use photon detector/supercluster eta 
+          cout << "Photon: " << "pt = " << pho->pt() << "; eta = " << pho->superCluster()->eta() << "; phi = " << pho->superCluster()->phi() << endl;
+          if(pho->pt()>lead_photon_pt){
+           lead_photon_pt = pho->pt();} 
+
+          if (i== 0){
+          fPhoton1Info.pt = pho->pt();
+          fPhoton1Info.eta = pho->superCluster()->eta();
+          fPhoton1Info.phi = pho->superCluster()->phi();
+
+         // fPhoton1Info.pt = pho->pt();
+         /*fPhoton1Info.eta = pho->eta();
+          fPhoton1Info.phi = pho->phi();*/
+         }
+         if (i ==1){
+          fPhoton2Info.pt = pho->pt();
+          fPhoton2Info.eta = pho->superCluster()->eta();
+          fPhoton2Info.phi = pho->superCluster()->phi();
+            // fPhoton2Info.pt= pho->pt();
+          // fPhoton2Info.eta = pho->eta();
+          // fPhoton2Info.phi = pho->phi();
+         } 
+         if (i==2){ 
+           fPhoton3Info.pt = pho->pt();
+           fPhoton3Info.eta = pho->superCluster()->eta();
+           fPhoton3Info.phi = pho->superCluster()->phi();
+          // fPhoton3Info.pt= pho->pt();
+          // fPhoton3Info.eta = pho->eta();
+          // fPhoton3Info.phi = pho->phi();
+        }
+          }
+        else continue;
+  }
+  cout << "lead_pt" << "pt = " << lead_photon_pt;
   fTree->Fill();
 
 
