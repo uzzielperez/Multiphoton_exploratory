@@ -16,7 +16,7 @@ process.source = cms.Source("PoolSource",
 process.demo = cms.EDAnalyzer('triphoton'
 )
 
-process.TFileService = cms.Service("TFileService", fileName = cms.string('sorted_triphoton.root')
+process.TFileService = cms.Service("TFileService", fileName = cms.string('Three_photon.root')
                                             )
 
 process.p = cms.Path(process.demo)

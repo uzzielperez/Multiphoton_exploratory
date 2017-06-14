@@ -74,7 +74,9 @@ class triphoton : public edm::one::EDAnalyzer<edm::one::SharedResources>  {
      struct photonInfo_t {
        float pt;
        float eta;
-       float phi; 
+       float phi;
+       float sceta;
+      float scphi; 
      };
      
      //Declare Instance of Photon1, Photon2, Photon3
@@ -108,9 +110,9 @@ triphoton::triphoton(const edm::ParameterSet& iConfig)
    edm::Service<TFileService> fs; 
    fTree = fs->make<TTree>("fTree","TriphotonTree");
    fTree->Branch("Event",&fEventInfo, "run/L:LS:evnum");
-   fTree->Branch("Photon1", &fPhoton1Info, "pt/F:eta:phi");
-   fTree->Branch("Photon2", &fPhoton2Info, "pt/F:eta:phi");
-   fTree->Branch("Photon3", &fPhoton3Info, "pt/F:eta:phi");
+   fTree->Branch("Photon1", &fPhoton1Info, "pt/F:eta:phi:sceta:scphi");
+   fTree->Branch("Photon2", &fPhoton2Info, "pt/F:eta:phi:sceta:scphi");
+   fTree->Branch("Photon3", &fPhoton3Info, "pt/F:eta:phi:sceta:scphi");
 
   // fTree->Branch("Photon1",&fPhoton1Info,ExoDiPhotons::photonBranchDefString.c_str());
   // //fTree->Branch("Photon2",&fPhoton2Info,ExoDiPhotons::photonBranchDefString.c_str()); 
@@ -166,12 +168,18 @@ iEvent.getByToken(photonsMiniAODToken_,photons);
   fPhoton3Info.phi = -999;
   float lead_photon_pt = 0; 
 
-
-//for (edm::View<pat::Photon>::const_iterator pho = photons->begin(); pho != photons->end(); ++pho) {
+  fPhoton1Info.sceta = -999;
+  fPhoton1Info.scphi = -999;
+  fPhoton2Info.sceta = -999;
+  fPhoton2Info.scphi = -999;
+  fPhoton3Info.sceta = -999;
+  fPhoton3Info.scphi = -999;
+ 
+  //for (edm::View<pat::Photon>::const_iterator pho = photons->begin(); pho != photons->end(); ++pho) {
   for (size_t i = 0; i < photons->size(); ++i) { //loop over photon collection
       const auto pho = photons->ptrAt(i);
           //photon_num = photons->size()
-          if (photons->size() > 2){
+         // if (photons->size() > 2){
           //print photon info
         //cout << "Photon: " << "pt = " << pho->pt() << "; eta = " << pho->eta() << "; phi = " << pho->phi() << endl;
 
@@ -182,34 +190,36 @@ iEvent.getByToken(photonsMiniAODToken_,photons);
 
           if (i== 0){
           fPhoton1Info.pt = pho->pt();
-          fPhoton1Info.eta = pho->superCluster()->eta();
-          fPhoton1Info.phi = pho->superCluster()->phi();
+          fPhoton1Info.sceta = pho->superCluster()->eta();
+          fPhoton1Info.scphi = pho->superCluster()->phi();
 
          // fPhoton1Info.pt = pho->pt();
-         /*fPhoton1Info.eta = pho->eta();
-          fPhoton1Info.phi = pho->phi();*/
+          fPhoton1Info.eta = pho->eta();
+          fPhoton1Info.phi = pho->phi();
          }
          if (i ==1){
           fPhoton2Info.pt = pho->pt();
-          fPhoton2Info.eta = pho->superCluster()->eta();
-          fPhoton2Info.phi = pho->superCluster()->phi();
+          fPhoton2Info.sceta = pho->superCluster()->eta();
+          fPhoton2Info.scphi = pho->superCluster()->phi();
             // fPhoton2Info.pt= pho->pt();
-          // fPhoton2Info.eta = pho->eta();
-          // fPhoton2Info.phi = pho->phi();
+          fPhoton2Info.eta = pho->eta();
+          fPhoton2Info.phi = pho->phi();
          } 
          if (i==2){ 
            fPhoton3Info.pt = pho->pt();
-           fPhoton3Info.eta = pho->superCluster()->eta();
-           fPhoton3Info.phi = pho->superCluster()->phi();
+           fPhoton3Info.sceta = pho->superCluster()->eta();
+           fPhoton3Info.scphi = pho->superCluster()->phi();
           // fPhoton3Info.pt= pho->pt();
-          // fPhoton3Info.eta = pho->eta();
-          // fPhoton3Info.phi = pho->phi();
+           fPhoton3Info.eta = pho->eta();
+           fPhoton3Info.phi = pho->phi();
         }
-          }
-        else continue;
+       //   }
+       // else continue;
   }
   cout << "lead_pt" << "pt = " << lead_photon_pt;
+if (photons->size()==3){
   fTree->Fill();
+}
 
 
 #ifdef THIS_IS_AN_EVENT_EXAMPLE
