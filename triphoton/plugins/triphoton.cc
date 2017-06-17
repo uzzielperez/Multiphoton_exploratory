@@ -85,6 +85,7 @@ class triphoton : public edm::one::EDAnalyzer<edm::one::SharedResources>  {
      photonInfo_t fPhoton2Info;
      photonInfo_t fPhoton3Info;
      
+     //Instantiate photon1, photon2, photon3 to store photon info.
      photonInfo_t photon1;
      photonInfo_t photon2;
      photonInfo_t photon3;
@@ -95,8 +96,6 @@ class triphoton : public edm::one::EDAnalyzer<edm::one::SharedResources>  {
      std::vector<photonInfo_t> photon3info;
 
      // ExoDiPhotons::photonInfo_t fPhoton1Info; // leading
-     // ExoDiPhotons::photonInfo_t fPhoton2Info; // subleading
-     //  ExoDiPhotons::photonInfo_t fPhoton3Info; // leading
         
 };
 
@@ -124,9 +123,7 @@ triphoton::triphoton(const edm::ParameterSet& iConfig)
    fTree->Branch("Photon2", &fPhoton2Info, "pt/F:eta:phi:sceta:scphi");
    fTree->Branch("Photon3", &fPhoton3Info, "pt/F:eta:phi:sceta:scphi");
 
-  // fTree->Branch("Photon1",&fPhoton1Info,ExoDiPhotons::photonBranchDefString.c_str());
-  // //fTree->Branch("Photon2",&fPhoton2Info,ExoDiPhotons::photonBranchDefString.c_str()); 
-  // //fTree->Branch("Photon3",&fPhoton3Info,ExoDiPhotons::photonBranchDefString.c_str());  
+  //fTree->Branch("Photon3",&fPhoton3Info,ExoDiPhotons::photonBranchDefString.c_str());  
    
    // photonsMiniAODToken_ = mayConsume<edm::View<pat::Photon>>(iConfig.getParameter<edm::InputTag>("photonsMiniAOD"));
   photonsMiniAODToken_ = mayConsume<edm::View<pat::Photon>>(edm::InputTag("slimmedPhotons"));
@@ -217,7 +214,7 @@ iEvent.getByToken(photonsMiniAODToken_,photons);
    //   const auto pho = photons->ptrAt(i);
          
          //fill photon container 
-         photoncontainer.push_back(pho->pt());
+       //  photoncontainer.push_back(pho->pt());
       
 
          //sort(pho->pt().begin(), pho->pt().end);
@@ -227,6 +224,7 @@ iEvent.getByToken(photonsMiniAODToken_,photons);
         //LOGICAL SORTING exercise: (Make sure they're sorted). 
         if (pho->pt() >= lead_photon_pt){
         sub_sub_photon = sub_leading_photon; sub_leading_photon = lead_photon_pt; lead_photon_pt = pho->pt(); 
+
         } 
 
         else if (pho->pt() > sub_leading_photon){
