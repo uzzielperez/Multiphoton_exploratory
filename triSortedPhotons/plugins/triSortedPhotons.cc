@@ -73,11 +73,11 @@ class triSortedPhotons : public edm::one::EDAnalyzer<edm::one::SharedResources> 
       eventInfo_t fEventInfo;
 
       struct photonInfo_t {
-        float pt;
-        float eta; 
-        float phi;
-        float sceta;
-        float scphi;
+        double pt;
+        double eta; 
+        double phi;
+        double sceta;
+        double scphi;
       };
       //Instantiate the different photon structs to store photoninfo
       photonInfo_t photon1;
@@ -155,9 +155,9 @@ triSortedPhotons::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetu
   photon3.scphi = -999;  
   
   //Initialize variables for boolean sorting 
-  float pholead1 = 0; 
-  float pholead2 = 0; 
-  float pholead3 = 0;
+  double pholead1 = 0; 
+  double pholead2 = 0; 
+  double pholead3 = 0;
 
   //Store Print out in a file: 
   ofstream cout("photon.txt", ios::app);
@@ -204,7 +204,8 @@ triSortedPhotons::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetu
    }
    
   }//end of photon loop 
-  
+
+  //****** CHECKING IF WE ARE STORING THE RIGHT INFO **********
   int phosize = photons->size();
   cout <<"SIZE: "<< phosize  << "; lead_pt: " << pholead1 << "; sub_leading_photon: " << pholead2 << "; sub_sub_leading: " << pholead3 << endl;
   cout <<"CHECK INFO:" << endl;
@@ -217,7 +218,6 @@ triSortedPhotons::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetu
   //Photon3
   cout << "pt: " << photon3.pt << "; eta: " << photon3.eta << "; phi: " << photon3.phi 
     << "; sceta: " << photon3.sceta<< "; scphi: " << photon3.scphi <<endl;  
-  
   cout << "--------------------------------------------- RUN ENDS -----------------------------------------"<<endl;
 //We only fill tree for events with at least three photons: 
    if (phosize >2) fTree->Fill();
