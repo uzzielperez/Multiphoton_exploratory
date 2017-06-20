@@ -13,7 +13,7 @@ process.source = cms.Source("PoolSource",
     )
 )
 
-process.demo = cms.EDAnalyzer('triSortedPhotons'
+process.demo = cms.EDAnalyzer('objphotons'
 )
 
 process.TFileService = cms.Service("TFileService", fileName = cms.string('sorted_triphoton.root')
