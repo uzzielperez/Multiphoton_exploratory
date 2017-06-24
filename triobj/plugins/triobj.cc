@@ -87,9 +87,14 @@ class triobj : public edm::one::EDAnalyzer<edm::one::SharedResources>  {
     photonInfo_t photon2Info;
     photonInfo_t photon3Info;
     photonInfo_t photonInfo;
+
+    struct photonPtComparer{
+      bool operator()(const photonInfo_t& x, const photonInfo_t& y)const{
+        return x.pt> y.pt; 
+      }
+    };
+
 };
-
-
 
 //
 // constants, enums and typedefs
@@ -131,13 +136,6 @@ triobj::~triobj()
 //
 // member functions
 //
-/*bool cmd(const photonInfo_t& p1, const photonInfo_t& p2) 
-    {   
-      return p1.pt < p2.pt; 
-    }*/   
-
-
-
 
 // ------------ method called for each event  ------------
 void
@@ -188,19 +186,10 @@ triobj::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetup)
   const pat::Photon *photon2 = NULL;
   const pat::Photon *photon3 = NULL; 
   */
-  //const pat::Photon *null_photon = NULL; 
-  //const pat::Photon *photon = NULL;
 
   //Triphoton object container 
   vector<photonInfo_t> triphoton_obj;
   //vector<edm::Ptr<pat::Photon>> triphotons;
-
-
-
-  //initialize to zero
-  /*for(auto i = triphoton_obj.begin(); i != triphoton_obj.end(); i++){
-     triphotons.push_back(&(*null_photon)); 
-  }*/
 
   //Loop over each photon in each event
   //for (edm::View<pat::Photon>::const_iterator pho = photons->begin(); pho != photons->end(); ++pho) {
@@ -210,9 +199,7 @@ triobj::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetup)
     cout << "Photon: " << "pt = " << pho->pt() << "; eta = " << pho->eta() <<"; phi = " <<pho->phi() << "; sceta = " 
          << pho->superCluster()->eta() << "; scphi = " << pho->superCluster()->phi() << endl;
      
-    //Assign to photon object 
-    //photon = &(*pho);
-    //If there are triphotons, we store the objects in the vector 
+    //If there are triphotons, we store the objects in the vector for sorting 
     photonInfo.pt = pho->pt();
     photonInfo.eta = pho->eta();
     photonInfo.phi = pho->phi();
@@ -222,16 +209,34 @@ triobj::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetup)
       triphoton_obj.push_back(photonInfo); 
     } 
    
- //  sort(triphoton_obj.rbegin(), triphoton_obj.rend(),cmd);     
+    //Sort HERE. See photonPtComparer() struct above  
+   sort(triphoton_obj.rbegin(), triphoton_obj.rend(), photonPtComparer());
 
 }//End of photon loop
 
+//***********CHECK if the pts are sorted in ascending order******************
+if (photons->size()>2) cout << "SORTED PHOTON pt" << endl;
 for (auto i = triphoton_obj.begin(); i != triphoton_obj.end(); i++) cout << i->pt <<endl;
 
-   //Fill struct info
-//We only fill tree for events with at least three photons: 
+   
 
-   //if (photons->size()>2) fTree->Fill();
+//*************WORK IN PROGRESS******************
+// Here I am trying to access each object in the vector and then assigning them to photon1Info, 
+// photon2Info, photon3Info. IT DOES NOT WORK!!!! 
+//Fill struct info
+/*for (auto i = triphoton_obj.begin(); i != triphoton_obj.end(); i++){
+    if (i==0) photon1Info.pt = i->pt();
+    if (i==2) photon2Info.pt = i->pt();
+    else if (i==3) photon3Info.pt = i->pt();   
+ }*/
+
+//cout << (*triphoton_obj)[0].pt<<endl; //pointer 
+//cout << triphoton_obj[1].pt <<endl;
+//cout << triphoton_obj[2].pt <<endl;
+
+   //We only fill tree for events with at least three photons: 
+
+   if (photons->size()>2) fTree->Fill();
 
 #ifdef THIS_IS_AN_EVENT_EXAMPLE
    Handle<ExampleData> pIn;
