@@ -83,14 +83,11 @@ class triobj : public edm::one::EDAnalyzer<edm::one::SharedResources>  {
     }; 
 
 //Instantiate the different photon structs to store photoninfo
-    photonInfo_t photon1Info;
-    photonInfo_t photon2Info;
-    photonInfo_t photon3Info;
     photonInfo_t photonInfo;
-
+    photonInfo_t triphoton_info[3]; //one for each photon
     struct photonPtComparer{
       bool operator()(const photonInfo_t& x, const photonInfo_t& y)const{
-        return x.pt> y.pt; 
+        return x.pt<y.pt; //for sorting in descending order 
       }
     };
 
@@ -114,10 +111,10 @@ triobj::triobj(const edm::ParameterSet& iConfig)
    usesResource("TFileService");
    edm::Service<TFileService> fs;
    fTree = fs->make<TTree>("fTree","TriphotonTree");
-   fTree->Branch("Event",&fEventInfo, "run/L:LS:evnum");
-   fTree->Branch("Photon1", &photon1Info, "pt/F:eta:phi:sceta:scphi");
-   fTree->Branch("Photon2", &photon2Info, "pt/F:eta:phi:sceta:scphi");
-   fTree->Branch("Photon3", &photon3Info, "pt/F:eta:phi:sceta:scphi");
+   fTree->Branch("Event",   &fEventInfo, "run/L:LS:evnum");
+   fTree->Branch("Photon1", &triphoton_info[0], "pt/F:eta:phi:sceta:scphi");
+   fTree->Branch("Photon2", &triphoton_info[1], "pt/F:eta:phi:sceta:scphi");
+   fTree->Branch("Photon3", &triphoton_info[2], "pt/F:eta:phi:sceta:scphi");
 
    photonsMiniAODToken_ = mayConsume<edm::View<pat::Photon>>(edm::InputTag("slimmedPhotons"));
 
@@ -149,25 +146,10 @@ triobj::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetup)
    fEventInfo.LS = -999;
    fEventInfo.evnum = -999;
 
-   photon1Info.pt = -999;
-   photon1Info.eta = -999;
-   photon1Info.phi = -999;
-   photon1Info.sceta = -999;
-   photon1Info.scphi = -999;
-   
-   photon2Info.pt = -999;
-   photon2Info.eta = -999;
-   photon2Info.phi = -999;
-   photon2Info.sceta = -999;
-   photon2Info.scphi = -999;
-   
-   photon3Info.pt = -999;
-   photon3Info.eta = -999;
-   photon3Info.phi = -999;
-   photon3Info.sceta = -999;
-   photon3Info.scphi = -999;
-
-  //Store Print out in a file: 
+  for(k = 0; k<3; k++){
+  triphoton_info[k] = (photonInfo_t){-999,-999,-999,-999,-999};
+  }
+   //Store Print out in a file: 
   ofstream cout("photon.txt", ios::app);
 
   //Print out event information 
@@ -181,11 +163,6 @@ triobj::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetup)
   
   edm::Handle<edm::View<pat::Photon>> photons;   //To get photon collection
   iEvent.getByToken(photonsMiniAODToken_,photons);
-  
-  /*const pat::Photon *photon1 = NULL;
-  const pat::Photon *photon2 = NULL;
-  const pat::Photon *photon3 = NULL; 
-  */
 
   //Triphoton object container 
   vector<photonInfo_t> triphoton_obj;
@@ -215,28 +192,33 @@ triobj::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetup)
 }//End of photon loop
 
 //***********CHECK if the pts are sorted in ascending order******************
-if (photons->size()>2) cout << "SORTED PHOTON pt" << endl;
+if (photons->size()>2) {
+  
+cout << "SORTED PHOTON pt" << endl;
 for (auto i = triphoton_obj.begin(); i != triphoton_obj.end(); i++) cout << i->pt <<endl;
-
    
+int counter = 0;
+for (auto i = triphoton_obj.begin(); i !=triphoton_obj.end(); i++){
+  if(counter<3){
+  triphoton_info[counter] = (photonInfo_t){i->pt, i->eta, i->phi, i->sceta, i->scphi};
+   }
+   counter = counter +1;
+//  else break/;
+}//end info storing loop
 
-//*************WORK IN PROGRESS******************
-// Here I am trying to access each object in the vector and then assigning them to photon1Info, 
-// photon2Info, photon3Info. IT DOES NOT WORK!!!! 
-//Fill struct info
-/*for (auto i = triphoton_obj.begin(); i != triphoton_obj.end(); i++){
-    if (i==0) photon1Info.pt = i->pt();
-    if (i==2) photon2Info.pt = i->pt();
-    else if (i==3) photon3Info.pt = i->pt();   
- }*/
-
-//cout << (*triphoton_obj)[0].pt<<endl; //pointer 
-//cout << triphoton_obj[1].pt <<endl;
-//cout << triphoton_obj[2].pt <<endl;
+cout << "****Check stored info****"<<endl;
+cout<< "Photon1:: " << "pt: " << triphoton_info[0].pt << "; eta: " << triphoton_info[0].eta << "; phi: " << triphoton_info[0].phi 
+    << "; sceta: " << triphoton_info[0].sceta << "; scphi: " << triphoton_info[0].scphi <<endl;
+cout<< "Photon2:: " << "pt: " << triphoton_info[1].pt << "; eta: " << triphoton_info[1].eta << "; phi: " << triphoton_info[1].phi 
+    << "; sceta: " << triphoton_info[1].sceta << "; scphi: " << triphoton_info[1].scphi <<endl;
+cout<< "Photon3:: " << "pt: " << triphoton_info[2].pt << "; eta: " << triphoton_info[2].eta << "; phi: " << triphoton_info[2].phi 
+    << "; sceta: " << triphoton_info[2].sceta << "; scphi: " << triphoton_info[2].scphi <<endl;
+    }//end triphoton printout
 
    //We only fill tree for events with at least three photons: 
 
    if (photons->size()>2) fTree->Fill();
+cout << "======================================RUN ENDS==================================" <<endl;
 
 #ifdef THIS_IS_AN_EVENT_EXAMPLE
    Handle<ExampleData> pIn;

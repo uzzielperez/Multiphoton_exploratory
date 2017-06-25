@@ -178,7 +178,7 @@ iEvent.getByToken(photonsMiniAODToken_,photons);
   float lead_photon_pt = 0; 
   float sub_leading_photon = 0; 
   float sub_sub_photon = 0;
-  float subthree = 0;
+//  float subthree = 0;
   fPhoton1Info.sceta = -999;
   fPhoton1Info.scphi = -999;
   fPhoton2Info.sceta = -999;
@@ -187,7 +187,6 @@ iEvent.getByToken(photonsMiniAODToken_,photons);
   fPhoton3Info.scphi = -999;
  
   //for (edm::View<pat::Photon>::const_iterator pho = photons->begin(); pho != photons->end(); ++pho) {
-  //print out attributes 
   
   //const pat::Photon *photon = NULL;
   //sort(photons->pt());
@@ -201,9 +200,13 @@ iEvent.getByToken(photonsMiniAODToken_,photons);
  
   //const pat::Photon *photon = NULL; 
  // sort(photon.begin(), photon.end());
- 
+  
  //Create container for photons in each event 
   std::vector<int> photoncontainer; 
+ 
+  //Create container for triphoton objects
+  std::vector<double> triphotoncontainer;
+
   for (size_t i = 0; i<photons->size(); ++i) {
     const auto pho = photons->ptrAt(i);
     cout << "Photon: " << "pt = " << pho->pt() << "; eta = " << pho->eta() <<"; phi = " <<pho->phi() << "; sceta = " << pho->superCluster()->eta() << "; scphi = " << pho->superCluster()->phi() << endl;
@@ -278,6 +281,8 @@ iEvent.getByToken(photonsMiniAODToken_,photons);
            fPhoton3Info.phi = pho->phi();
           // photon3info.push_back(pho->pt);
          }
+
+        //if(photons->size()==3) triphotoncontainer.push_back(photons);
         // cout << "Photon: " << "pt = " << pho->pt() << "; eta = " << pho->eta() <<"; phi = " <<pho->phi() << "; sceta = " << pho->superCluster()->eta() << "; scphi = " << pho->superCluster()->phi() << endl;
         // }
         //
