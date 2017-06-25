@@ -191,7 +191,7 @@ triobj::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetup)
 
 }//End of photon loop
 
-//***********CHECK if the pts are sorted in ascending order******************
+//***********CHECK if the pts are sorted in descending order******************
 if (photons->size()>2) {
   
 cout << "SORTED PHOTON pt" << endl;
