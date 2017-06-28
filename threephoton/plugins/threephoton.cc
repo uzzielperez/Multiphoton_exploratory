@@ -84,7 +84,7 @@ edm::EDGetToken photonsMiniAODToken_;
     photonInfo_t triphoton_info[3]; //one for each photon
     
     static bool comparePhotonsByPt(const edm::Ptr<pat::Photon> photon1, const edm::Ptr<pat::Photon> photon2) {
-          return(photon1->pt()>=photon2->pt());
+          return(photon1->pt()<=photon2->pt());
             }
 
 
@@ -152,7 +152,7 @@ threephoton::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetup)
   triphoton_info[k] = (photonInfo_t){-999,-999,-999,-999,-999};
   }
    //Store Print out in a file: 
-  ofstream cout("photon.txt", ios::app);
+  ofstream cout("output.txt", ios::app);
 
   //Print out event information 
   cout << "Run: " << iEvent.id().run() << ", LS: " << iEvent.id().luminosityBlock() 
@@ -168,8 +168,8 @@ threephoton::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetup)
 
   //Triphoton object container 
   vector<photonInfo_t> triphoton_obj;
-  vector<edm::Ptr<pat::Photon>> photons;
-
+  vector<edm::Ptr<pat::Photon>> photon_obj;
+  
 //  vector<pat::Photon*> photons; 
 
   //Loop over each photon in each event
@@ -180,22 +180,41 @@ threephoton::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetup)
     cout << "Photon: " << "pt = " << pho->pt() << "; eta = " << pho->eta() <<"; phi = " <<pho->phi() << "; sceta = " 
          << pho->superCluster()->eta() << "; scphi = " << pho->superCluster()->phi() << endl;
     
-   // if(photons->size()>2){
-         //triphotons.push_back(&(*pho));
-          photons.push_back(pho);
-    //}
+    photon_obj.push_back(pho);
 
-    //Sort HERE. See photonPtComparer() struct above  
-   //sort(photon_obj.rbegin(), photon_obj.rend(), photonPtComparer());
-   sort(photons.rbegin(), photons.rend(), comparePhotonsByPt);
+    }//End of photon loop
 
-  }//End of photon loop
- 
+  //Sort HERE. See photonPtComparer() struct above  
+   sort(photon_obj.rbegin(), photon_obj.rend(), comparePhotonsByPt);
+
 //***CHECK sorting from the triphotons vector 
 //triphotons vector contents: for(auto i = triphotons.begin(); i != triphotons.end(); i++) cout<< i->pt() <<endl;
-for (int n = 0; n < 3; n++){
- cout<< photons[n]->pt()<<endl;
-}
+int counter = 0; 
+for (size_t n = 0; n < photon_obj.size(); n++){
+ cout<< photon_obj[n]->pt()<<endl; //supposedly showing pts 
+ if (counter<3){
+  triphoton_info[counter] = (photonInfo_t){photon_obj[n]->pt(), photon_obj[n]->eta(), photon_obj[n]->phi(), 
+                  photon_obj[n]->superCluster()->eta(), photon_obj[n]->superCluster()->phi()}; 
+  counter = counter + 1; 
+}//End filling
+}//End Info Filling loop
+
+//******** THIS IS HOW I WANTED TO DO IT THOUGH ***********
+  vector<edm::Ptr<pat::Photon>>::iterator iter; 
+//for (iter = photon_obj.begin(); iter != photon_obj.end(); ++iter){
+//  for (size_t iter = 0; iter < photon_obj.size(); ++iter){  
+  //cout << "photonobjects_pt: " << iter->pt() << endl; 
+//}
+
+
+ //*CHECK INFORMATION BEING STORED IN THE STRUCTS*
+cout<< "****Check stored info****"<<endl;
+cout<< "Photon1:: " << "pt: " << triphoton_info[0].pt << "; eta: " << triphoton_info[0].eta << "; phi: " << triphoton_info[0].phi 
+    << "; sceta: " << triphoton_info[0].sceta << "; scphi: " << triphoton_info[0].scphi <<endl;
+cout<< "Photon2:: " << "pt: " << triphoton_info[1].pt << "; eta: " << triphoton_info[1].eta << "; phi: " << triphoton_info[1].phi 
+    << "; sceta: " << triphoton_info[1].sceta << "; scphi: " << triphoton_info[1].scphi <<endl;
+cout<< "Photon3:: " << "pt: " << triphoton_info[2].pt << "; eta: " << triphoton_info[2].eta << "; phi: " << triphoton_info[2].phi 
+    << "; sceta: " << triphoton_info[2].sceta << "; scphi: " << triphoton_info[2].scphi <<endl;
 
 //We only fill tree for events with at least three photons: 
 
