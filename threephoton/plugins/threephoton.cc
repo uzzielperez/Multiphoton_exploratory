@@ -189,24 +189,33 @@ threephoton::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetup)
 
 //***CHECK sorting from the triphotons vector 
 //triphotons vector contents: for(auto i = triphotons.begin(); i != triphotons.end(); i++) cout<< i->pt() <<endl;
-int counter = 0; 
-for (size_t n = 0; n < photon_obj.size(); n++){
- cout<< photon_obj[n]->pt()<<endl; //supposedly showing pts 
- if (counter<3){
-  triphoton_info[counter] = (photonInfo_t){photon_obj[n]->pt(), photon_obj[n]->eta(), photon_obj[n]->phi(), 
-                  photon_obj[n]->superCluster()->eta(), photon_obj[n]->superCluster()->phi()}; 
-  counter = counter + 1; 
+  /*int counter = 0; 
+  for (size_t n = 0; n < photon_obj.size(); n++){
+     cout<< photon_obj[n]->pt()<<endl; //supposedly showing pts 
+       if (counter<3){
+          triphoton_info[counter] = (photonInfo_t){photon_obj[n]->pt(), photon_obj[n]->eta(), 
+          photon_obj[n]->phi(),photon_obj[n]->superCluster()->eta(),
+          photon_obj[n]->superCluster()->phi()}; 
+       counter = counter + 1; 
 }//End filling
-}//End Info Filling loop
+}//End Info Filling loop*/
 
-//******** THIS IS HOW I WANTED TO DO IT THOUGH ***********
+//******** THIS IS HOW I WANTED TO DO IT ***********
   vector<edm::Ptr<pat::Photon>>::iterator iter; 
-//for (iter = photon_obj.begin(); iter != photon_obj.end(); ++iter){
-//  for (size_t iter = 0; iter < photon_obj.size(); ++iter){  
-  //cout << "photonobjects_pt: " << iter->pt() << endl; 
-//}
+  int jcounter = 0; 
+  for (iter = photon_obj.begin(); iter != photon_obj.end(); ++iter){
+      cout << "photonobjects_pt: " << (*iter)->pt() << endl;
+      if (jcounter<3){
+          triphoton_info[jcounter] = (photonInfo_t){(*iter)->pt(),(*iter)->eta(), 
+                                  (*iter)->phi(), (*iter)->superCluster()->eta(),
+                                  (*iter)->superCluster()->phi()}; 
+       jcounter = jcounter + 1;      
+  }//endfilling
+  }//end loop
+  
 
 
+  if (photons->size()>2){
  //*CHECK INFORMATION BEING STORED IN THE STRUCTS*
 cout<< "****Check stored info****"<<endl;
 cout<< "Photon1:: " << "pt: " << triphoton_info[0].pt << "; eta: " << triphoton_info[0].eta << "; phi: " << triphoton_info[0].phi 
@@ -215,7 +224,7 @@ cout<< "Photon2:: " << "pt: " << triphoton_info[1].pt << "; eta: " << triphoton_
     << "; sceta: " << triphoton_info[1].sceta << "; scphi: " << triphoton_info[1].scphi <<endl;
 cout<< "Photon3:: " << "pt: " << triphoton_info[2].pt << "; eta: " << triphoton_info[2].eta << "; phi: " << triphoton_info[2].phi 
     << "; sceta: " << triphoton_info[2].sceta << "; scphi: " << triphoton_info[2].scphi <<endl;
-
+  }// end condition on only greater than 2 photons. 
 //We only fill tree for events with at least three photons: 
 
    if (photons->size()>2) fTree->Fill();
