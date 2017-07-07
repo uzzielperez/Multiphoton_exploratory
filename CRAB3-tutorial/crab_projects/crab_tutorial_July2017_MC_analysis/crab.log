@@ -1,0 +1,671 @@
+DEBUG 2017-07-03 19:53:58,797: 	 Executing command: 'submit'
+DEBUG 2017-07-03 19:53:58,797: 	 Found CRAB cache file /afs/cern.ch/user/c/ciperez/.crab3
+DEBUG 2017-07-03 19:53:58,865: 	 Checking credentials
+DEBUG 2017-07-03 19:53:58,866: 	 Found proxy file /tmp/x509up_u81686
+DEBUG 2017-07-03 19:53:58,866: 	 Getting proxy life time left
+DEBUG 2017-07-03 19:54:00,334: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u81686 -timeleft
+ output : 603110
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 19:54:01,472: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u81686 -actimeleft
+ output : 603108
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 19:54:01,472: 	 Proxy valid for 167:31:50 hours
+INFO 2017-07-03 19:54:01,473: 	 Will use CRAB configuration file crabConfig_tutorial_MC_analysis.py
+DEBUG 2017-07-03 19:54:01,473: 	 Loading CRAB configuration file.
+DEBUG 2017-07-03 19:54:08,451: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+DEBUG 2017-07-03 19:54:08,760: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ciperez/CN=773459/CN=Cilicia Uzziel Perez
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 19:54:08,760: 	 Checking credentials
+DEBUG 2017-07-03 19:54:08,760: 	 Found proxy file /tmp/x509up_u81686
+DEBUG 2017-07-03 19:54:08,760: 	 Getting proxy life time left
+DEBUG 2017-07-03 19:54:09,803: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u81686 -timeleft
+ output : 603101
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 19:54:10,833: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u81686 -actimeleft
+ output : 603099
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 19:54:10,834: 	 Proxy valid for 167:31:41 hours
+DEBUG 2017-07-03 19:54:11,976: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u81686 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 19:54:12,395: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108|0105|0109).cern.ch
+DEBUG 2017-07-03 19:54:12,611: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ciperez/CN=773459/CN=Cilicia Uzziel Perez
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 19:54:12,611: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2017-07-03 19:54:12,611: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ciperez/CN=773459/CN=Cilicia Uzziel Perez_cmsweb.cern.ch for credential name
+DEBUG 2017-07-03 19:54:13,245: 	 Executing : 
+ command : myproxy-info -l 87563fafcc81b81d7383d27ab3acabdf21124584 -s myproxy.cern.ch
+ output : username: 87563fafcc81b81d7383d27ab3acabdf21124584
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ciperez/CN=773459/CN=Cilicia Uzziel Perez
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108|0105|0109).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108|0105|0109).cern.ch
+  timeleft: 719:49:07  (30.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 19:54:13,246: 	 Myproxy is valid: 2591347
+DEBUG 2017-07-03 19:54:13,246: 	 Command use: submit
+DEBUG 2017-07-03 19:54:13,246: 	 Options use: ['-c', 'crabConfig_tutorial_MC_analysis.py']
+DEBUG 2017-07-03 19:54:13,637: 	 CRABClient version: 3.3.1706
+DEBUG 2017-07-03 19:54:13,638: 	 Instance is prod
+DEBUG 2017-07-03 19:54:13,638: 	 Server base url is cmsweb.cern.ch
+DEBUG 2017-07-03 19:54:13,638: 	 Command url /crabserver/prod/workflow
+DEBUG 2017-07-03 19:54:13,638: 	 Started submission
+DEBUG 2017-07-03 19:54:13,638: 	 Working on /afs/cern.ch/user/c/ciperez/OWNAnalyzer/CMSSW_8_0_13_patch1/src/triphoton/CRAB3-tutorial/crab_projects/crab_tutorial_July2017_MC_analysis
+DEBUG 2017-07-03 19:54:16,436: 	 Loading required information from the environment
+DEBUG 2017-07-03 19:54:16,436: 	 Found CMSSW_8_0_13_patch1 for slc6_amd64_gcc530 with base /afs/cern.ch/user/c/ciperez/OWNAnalyzer/CMSSW_8_0_13_patch1
+DEBUG 2017-07-03 19:54:16,436: 	 Loading required information from the environment
+DEBUG 2017-07-03 19:54:16,436: 	 Found CMSSW_8_0_13_patch1 for slc6_amd64_gcc530 with base /afs/cern.ch/user/c/ciperez/OWNAnalyzer/CMSSW_8_0_13_patch1
+DEBUG 2017-07-03 19:54:16,482: 	 UNIQUE NAME: tarUUID e5ec1571-9074-452a-8e32-705dbc1da91c 
+DEBUG 2017-07-03 19:54:16,483: 	 self.config: from WMCore.Configuration import Configuration
+config = Configuration()
+config.section_('General')
+config.General.transferLogs = True
+config.General.transferOutputs = True
+config.General.workArea = 'crab_projects'
+config.General.requestName = 'tutorial_July2017_MC_analysis'
+config.section_('JobType')
+config.JobType.psetName = 'pset_tutorial_analysis.py'
+config.JobType.pluginName = 'Analysis'
+config.section_('Data')
+config.Data.inputDataset = '/GenericTTbar/HC-CMSSW_5_3_1_START53_V5-v1/GEN-SIM-RECO'
+config.Data.outputDatasetTag = 'CRAB3_tutorial_May2015_MC_analysis'
+config.Data.publication = True
+config.Data.unitsPerJob = 10
+config.Data.inputDBS = 'global'
+config.Data.splitting = 'FileBased'
+config.Data.outLFNDirBase = '/store/user/ciperez/'
+config.section_('Site')
+config.Site.storageSite = 'T2_US_Nebraska'
+config.section_('User')
+config.section_('Debug')
+
+DEBUG 2017-07-03 19:54:16,483: 	 self.config.JobType.psetName: pset_tutorial_analysis.py
+INFO 2017-07-03 19:54:16,483: 	 Importing CMSSW configuration pset_tutorial_analysis.py
+INFO 2017-07-03 19:54:17,069: 	 Finished importing CMSSW configuration pset_tutorial_analysis.py
+DEBUG 2017-07-03 19:54:17,069: 	 Writing CMSSW configuration to /afs/cern.ch/user/c/ciperez/OWNAnalyzer/CMSSW_8_0_13_patch1/src/triphoton/CRAB3-tutorial/crab_projects/crab_tutorial_July2017_MC_analysis/inputs/PSet.py
+DEBUG 2017-07-03 19:54:17,167: 	 The following EDM output files will be collected: ['output.root']
+DEBUG 2017-07-03 19:54:17,167: 	 The following TFile output files will be collected: []
+DEBUG 2017-07-03 19:54:17,167: 	 The following user output files will be collected: []
+DEBUG 2017-07-03 19:54:17,167: 	 Loading required information from the environment
+DEBUG 2017-07-03 19:54:17,167: 	 Found CMSSW_8_0_13_patch1 for slc6_amd64_gcc530 with base /afs/cern.ch/user/c/ciperez/OWNAnalyzer/CMSSW_8_0_13_patch1
+DEBUG 2017-07-03 19:54:17,167: 	 Making tarball in /afs/cern.ch/user/c/ciperez/OWNAnalyzer/CMSSW_8_0_13_patch1/src/triphoton/CRAB3-tutorial/crab_projects/crab_tutorial_July2017_MC_analysis/inputs/e5ec1571-9074-452a-8e32-705dbc1da91cdefault.tgz
+DEBUG 2017-07-03 19:54:18,889: 	 Checking directory /afs/cern.ch/user/c/ciperez/OWNAnalyzer/CMSSW_8_0_13_patch1/lib
+DEBUG 2017-07-03 19:54:18,889: 	 Adding directory /afs/cern.ch/user/c/ciperez/OWNAnalyzer/CMSSW_8_0_13_patch1/lib to tarball
+DEBUG 2017-07-03 19:54:19,135: 	 Checking directory /afs/cern.ch/user/c/ciperez/OWNAnalyzer/CMSSW_8_0_13_patch1/biglib
+DEBUG 2017-07-03 19:54:19,135: 	 Adding directory /afs/cern.ch/user/c/ciperez/OWNAnalyzer/CMSSW_8_0_13_patch1/biglib to tarball
+DEBUG 2017-07-03 19:54:19,135: 	 Checking directory /afs/cern.ch/user/c/ciperez/OWNAnalyzer/CMSSW_8_0_13_patch1/module
+DEBUG 2017-07-03 19:54:19,147: 	 Adding data directory /afs/cern.ch/user/c/ciperez/OWNAnalyzer/CMSSW_8_0_13_patch1/src/triphoton/CommonClasses/interface to tarball
+DEBUG 2017-07-03 19:54:19,195: 	 Uploading archive /afs/cern.ch/user/c/ciperez/OWNAnalyzer/CMSSW_8_0_13_patch1/src/triphoton/CRAB3-tutorial/crab_projects/crab_tutorial_July2017_MC_analysis/inputs/e5ec1571-9074-452a-8e32-705dbc1da91cdefault.tgz (234 KB) to the CRAB cache. Using URI https://cmsweb.cern.ch/crabcache
+DEBUG 2017-07-03 19:54:19,660: 	 Loading required information from the environment
+DEBUG 2017-07-03 19:54:19,660: 	 Found CMSSW_8_0_13_patch1 for slc6_amd64_gcc530 with base /afs/cern.ch/user/c/ciperez/OWNAnalyzer/CMSSW_8_0_13_patch1
+DEBUG 2017-07-03 19:54:19,660: 	 Making tarball in /afs/cern.ch/user/c/ciperez/OWNAnalyzer/CMSSW_8_0_13_patch1/src/triphoton/CRAB3-tutorial/crab_projects/crab_tutorial_July2017_MC_analysis/inputs/debugFiles.tgz
+DEBUG 2017-07-03 19:54:19,669: 	 Uploading archive /afs/cern.ch/user/c/ciperez/OWNAnalyzer/CMSSW_8_0_13_patch1/src/triphoton/CRAB3-tutorial/crab_projects/crab_tutorial_July2017_MC_analysis/inputs/debugFiles.tgz (0 KB) to the CRAB cache. Using URI https://cmsweb.cern.ch/crabcache
+DEBUG 2017-07-03 19:54:20,057: 	 Result uploading input files: 17b0128e57a4b452491730f11a4a4cc39b0ecaac58912ef9398875acfe5d339a.tar.gz 
+INFO 2017-07-03 19:54:20,058: 	 Sending the request to the server
+DEBUG 2017-07-03 19:54:20,058: 	 Submitting {'maxjobruntime': 1250, 'extrajdl': [], 'ignorelocality': 0, 'savelogsflag': 1, 'useparent': 0, 'asyncdest': 'T2_US_Nebraska', 'algoargs': 10, 'cachefilename': '17b0128e57a4b452491730f11a4a4cc39b0ecaac58912ef9398875acfe5d339a.tar.gz', 'numcores': 1, 'addoutputfiles': [], 'generator': 'pythia', 'maxmemory': 2000, 'publishdbsurl': 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', 'priority': 10, 'jobsw': 'CMSSW_8_0_13_patch1', 'edmoutfiles': ['output.root'], 'userfiles': [], 'primarydataset': '', 'inputdata': '/GenericTTbar/HC-CMSSW_5_3_1_START53_V5-v1/GEN-SIM-RECO', 'lfn': '/store/user/ciperez/', 'dryrun': 0, 'workflow': 'crab_tutorial_July2017_MC_analysis', 'cacheurl': u'https://cmsweb.cern.ch/crabcache', 'nonprodsw': 0, 'tfileoutfiles': [], 'oneEventMode': 0, 'debugfilename': '9026ddb8a4f665adace538b9fadce4bf81f6a87167fb13dad887f703b174e8cb.tar.gz', 'saveoutput': 1, 'publication': 1, 'jobarch': 'slc6_amd64_gcc530', 'totalunits': 0, 'splitalgo': 'FileBased', 'ignoreglobalblacklist': 0, 'nonvaliddata': 0, 'dbsurl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', 'publishgroupname': 0, 'jobtype': 'Analysis', 'publishname2': 'CRAB3_tutorial_May2015_MC_analysis'} 
+DEBUG 2017-07-03 19:54:20,058: 	 Encoded submit request: maxjobruntime=1250&ignorelocality=0&savelogsflag=1&useparent=0&asyncdest=T2_US_Nebraska&algoargs=10&cachefilename=17b0128e57a4b452491730f11a4a4cc39b0ecaac58912ef9398875acfe5d339a.tar.gz&numcores=1&generator=pythia&maxmemory=2000&publishdbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fphys03%2FDBSWriter&priority=10&jobsw=CMSSW_8_0_13_patch1&primarydataset=&inputdata=%2FGenericTTbar%2FHC-CMSSW_5_3_1_START53_V5-v1%2FGEN-SIM-RECO&lfn=%2Fstore%2Fuser%2Fciperez%2F&dryrun=0&workflow=crab_tutorial_July2017_MC_analysis&cacheurl=https%3A%2F%2Fcmsweb.cern.ch%2Fcrabcache&nonprodsw=0&oneEventMode=0&debugfilename=9026ddb8a4f665adace538b9fadce4bf81f6a87167fb13dad887f703b174e8cb.tar.gz&saveoutput=1&publication=1&jobarch=slc6_amd64_gcc530&totalunits=0&splitalgo=FileBased&ignoreglobalblacklist=0&nonvaliddata=0&dbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fglobal%2FDBSReader&publishgroupname=0&jobtype=Analysis&publishname2=CRAB3_tutorial_May2015_MC_analysis&edmoutfiles=output.root
+DEBUG 2017-07-03 19:54:20,872: 	 Result: {u'result': [{u'RequestName': u'170703_175420:ciperez_crab_tutorial_July2017_MC_analysis'}]}
+INFO 2017-07-03 19:54:20,877: 	 Success: Your task has been delivered to the CRAB3 server.
+INFO 2017-07-03 19:54:20,877: 	 Task name: 170703_175420:ciperez_crab_tutorial_July2017_MC_analysis
+INFO 2017-07-03 19:54:20,877: 	 Please use 'crab status' to check how the submission process proceeds.
+DEBUG 2017-07-03 19:54:20,878: 	 About to return
+INFO 2017-07-03 19:54:20,884: 	 Log file is /afs/cern.ch/user/c/ciperez/OWNAnalyzer/CMSSW_8_0_13_patch1/src/triphoton/CRAB3-tutorial/crab_projects/crab_tutorial_July2017_MC_analysis/crab.log
+DEBUG 2017-07-03 19:56:15,352: 	 Executing command: 'status'
+DEBUG 2017-07-03 19:56:15,352: 	 Found CRAB cache file /afs/cern.ch/user/c/ciperez/.crab3
+DEBUG 2017-07-03 19:56:15,382: 	 Checking credentials
+DEBUG 2017-07-03 19:56:15,383: 	 Found proxy file /tmp/x509up_u81686
+DEBUG 2017-07-03 19:56:15,383: 	 Getting proxy life time left
+DEBUG 2017-07-03 19:56:16,736: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u81686 -timeleft
+ output : 602974
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 19:56:17,874: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u81686 -actimeleft
+ output : 602972
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 19:56:17,874: 	 Proxy valid for 167:29:34 hours
+DEBUG 2017-07-03 19:56:18,121: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ciperez/CN=773459/CN=Cilicia Uzziel Perez
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 19:56:18,122: 	 Checking credentials
+DEBUG 2017-07-03 19:56:18,123: 	 Found proxy file /tmp/x509up_u81686
+DEBUG 2017-07-03 19:56:18,123: 	 Getting proxy life time left
+DEBUG 2017-07-03 19:56:19,056: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u81686 -timeleft
+ output : 602972
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 19:56:19,878: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u81686 -actimeleft
+ output : 602970
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 19:56:19,878: 	 Proxy valid for 167:29:32 hours
+DEBUG 2017-07-03 19:56:20,322: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108|0105|0109).cern.ch
+DEBUG 2017-07-03 19:56:20,443: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ciperez/CN=773459/CN=Cilicia Uzziel Perez
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 19:56:20,443: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2017-07-03 19:56:20,443: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ciperez/CN=773459/CN=Cilicia Uzziel Perez_cmsweb.cern.ch for credential name
+DEBUG 2017-07-03 19:56:21,166: 	 Executing : 
+ command : myproxy-info -l 87563fafcc81b81d7383d27ab3acabdf21124584 -s myproxy.cern.ch
+ output : username: 87563fafcc81b81d7383d27ab3acabdf21124584
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ciperez/CN=773459/CN=Cilicia Uzziel Perez
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108|0105|0109).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108|0105|0109).cern.ch
+  timeleft: 719:46:59  (30.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 19:56:21,167: 	 Myproxy is valid: 2591219
+DEBUG 2017-07-03 19:56:21,167: 	 Command use: status
+DEBUG 2017-07-03 19:56:21,167: 	 Options use: ['-d', 'crab_projects/crab_tutorial_July2017_MC_analysis']
+DEBUG 2017-07-03 19:56:21,600: 	 CRABClient version: 3.3.1706
+DEBUG 2017-07-03 19:56:21,600: 	 Instance is prod
+DEBUG 2017-07-03 19:56:21,600: 	 Server base url is cmsweb.cern.ch
+DEBUG 2017-07-03 19:56:21,600: 	 Command url /crabserver/prod/workflow
+DEBUG 2017-07-03 19:56:22,089: 	 Got information from server oracle database: {u'result': [u'170703_175420:ciperez_crab_tutorial_July2017_MC_analysis', u'None', u'SUBMITTED', u'2017-07-03 17:54:20.863784', u'None', u'2017-07-03 17:55:45.016879', u'None', u'CMSSW_8_0_13_patch1', u'slc6_amd64_gcc530', u'/GenericTTbar/HC-CMSSW_5_3_1_START53_V5-v1/GEN-SIM-RECO', u'[]', u'[]', u'FileBased', u"{'splitOnRun': False, 'halt_job_on_file_boundaries': False, 'files_per_job': 10, 'runs': [], 'lumis': []}", u'0', u'17b0128e57a4b452491730f11a4a4cc39b0ecaac58912ef9398875acfe5d339a.tar.gz', u'https://cmsweb.cern.ch/crabcache', u'ciperez', u'/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ciperez/CN=773459/CN=Cilicia Uzziel Perez', u'cms', u'None', u'None', u'CRAB3_tutorial_May2015_MC_analysis-00000000000000000000000000000000', u'T2_US_Nebraska', u'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', u'T', u'Analysis', u'{}', u'[]', u'T', u'vocms052', u'[]', u'1250', u'1', u'2000', u'10', u'None', u'http://vocms0137.cern.ch/mon/cms535/170703_175420:ciperez_crab_tutorial_July2017_MC_analysis', u'None', u'None', u'[]', u'[]', u'[]', u'pythia', u'[]', u'[]', u"['output.root']", u'https://cmsweb.cern.ch/crabserver/prod', u'None', u'0', u'cmsgwms-collector-global.cern.ch:9620,cmssrv221.fnal.gov:9620', u'crab3@vocms0137.cern.ch', u'F', u'[]', u'T', u'/store/user/ciperez/', u'F', u'None', u'F', u'F', u'F', u'None', u'GenericTTbar', u'filetransfers', u'SUBMIT', u'9737582', u'9026ddb8a4f665adace538b9fadce4bf81f6a87167fb13dad887f703b174e8cb.tar.gz', u'188.184.95.2', u'F', u'None'], u'desc': {u'columns': [u'tm_taskname', u'panda_jobset_id', u'tm_task_status', u'tm_start_time', u'tm_start_injection', u'tm_end_injection', u'tm_task_failure', u'tm_job_sw', u'tm_job_arch', u'tm_input_dataset', u'tm_site_whitelist', u'tm_site_blacklist', u'tm_split_algo', u'tm_split_args', u'tm_totalunits', u'tm_user_sandbox', u'tm_cache_url', u'tm_username', u'tm_user_dn', u'tm_user_vo', u'tm_user_role', u'tm_user_group', u'tm_publish_name', u'tm_asyncdest', u'tm_dbs_url', u'tm_publish_dbs_url', u'tm_publication', u'tm_job_type', u'tm_arguments', u'panda_resubmitted_jobs', u'tm_save_logs', u'tw_name', u'tm_user_infiles', u'tm_maxjobruntime', u'tm_numcores', u'tm_maxmemory', u'tm_priority', u'tm_output_dataset', u'tm_user_webdir', u'tm_activity', u'tm_scriptexe', u'tm_scriptargs', u'tm_extrajdl', u'tm_task_warnings', u'tm_generator', u'tm_outfiles', u'tm_tfile_outfiles', u'tm_edm_outfiles', u'tm_asourl', u'tm_events_per_lumi', u'tm_use_parent', u'tm_collector', u'tm_schedd', u'tm_dry_run', u'tm_user_files', u'tm_transfer_outputs', u'tm_output_lfn', u'tm_ignore_locality', u'tm_fail_limit', u'tm_one_event_mode', u'tm_publish_groupname', u'tm_nonvalid_input_dataset', u'tm_secondary_input_dataset', u'tm_primary_dataset', u'tm_asodb', u'tm_task_command', u'clusterid', u'tm_debug_files', u'tm_submitter_ip_addr', u'tm_ignore_global_blacklist', u'tm_last_publication']}}
+INFO 2017-07-03 19:56:22,090: 	 CRAB project directory:		/afs/cern.ch/user/c/ciperez/OWNAnalyzer/CMSSW_8_0_13_patch1/src/triphoton/CRAB3-tutorial/crab_projects/crab_tutorial_July2017_MC_analysis
+INFO 2017-07-03 19:56:22,090: 	 Task name:			170703_175420:ciperez_crab_tutorial_July2017_MC_analysis
+INFO 2017-07-03 19:56:22,090: 	 Grid scheduler:			crab3@vocms0137.cern.ch
+INFO 2017-07-03 19:56:22,090: 	 Status on the CRAB server:	SUBMITTED
+INFO 2017-07-03 19:56:22,090: 	 Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/170703_175420%3Aciperez_crab_tutorial_July2017_MC_analysis
+INFO 2017-07-03 19:56:22,090: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=ciperez&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=170703_175420%3Aciperez_crab_tutorial_July2017_MC_analysis
+DEBUG 2017-07-03 19:56:22,090: 	 The CRAB server submitted your task to the Grid scheduler (cluster ID: 9737582)
+DEBUG 2017-07-03 19:56:22,090: 	 Webdir is located at http://vocms0137.cern.ch/mon/cms535/170703_175420:ciperez_crab_tutorial_July2017_MC_analysis
+DEBUG 2017-07-03 19:56:22,471: 	 Proxied webdir is located at https://cmsweb.cern.ch/scheddmon/0137/cms535/170703_175420:ciperez_crab_tutorial_July2017_MC_analysis
+DEBUG 2017-07-03 19:56:22,471: 	 Retrieving 'status_cache' file from https://cmsweb.cern.ch/scheddmon/0137/cms535/170703_175420:ciperez_crab_tutorial_July2017_MC_analysis/status_cache
+INFO 2017-07-03 19:56:22,860: 	 Waiting for the Grid scheduler to report back the status of your task
+ERROR 2017-07-03 19:56:22,861: 	 Cannot retrieve the status_cache file. Maybe the task process has not run yet? Got:
+url=https://cmsweb.cern.ch/scheddmon/0137/cms535/170703_175420:ciperez_crab_tutorial_July2017_MC_analysis/status_cache, code=403, reason=Forbidden, headers={'Content-Length': '366', 'Set-Cookie': 'cms-auth=f1abaee4af30c75386638a3921722e74c64ec283baf626c9e96b6b1c2b899b540aa4f79cf87bd760;path=/;secure;httponly;expires=Thu, 01-Jan-1970 00:00:01 GMT', 'Server': 'Apache/2.2.15 (Red Hat)', 'Date': 'Mon, 03 Jul 2017 17:56:22 GMT', 'Content-Type': 'text/html; charset=iso-8859-1', 'CMS-Server-Time': 'D=5625 t=1499104582854408'}
+ERROR 2017-07-03 19:56:22,861: 	 url=https://cmsweb.cern.ch/scheddmon/0137/cms535/170703_175420:ciperez_crab_tutorial_July2017_MC_analysis/status_cache, code=403, reason=Forbidden, headers={'Content-Length': '366', 'Set-Cookie': 'cms-auth=f1abaee4af30c75386638a3921722e74c64ec283baf626c9e96b6b1c2b899b540aa4f79cf87bd760;path=/;secure;httponly;expires=Thu, 01-Jan-1970 00:00:01 GMT', 'Server': 'Apache/2.2.15 (Red Hat)', 'Date': 'Mon, 03 Jul 2017 17:56:22 GMT', 'Content-Type': 'text/html; charset=iso-8859-1', 'CMS-Server-Time': 'D=5625 t=1499104582854408'}
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1706/lib/python2.7/site-packages/CRABClient/Commands/status.py", line 110, in __call__
+    statusCacheData = getDataFromURL(url, self.proxyfilename)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1706/lib/python2.7/site-packages/CRABClient/UserUtilities.py", line 166, in getDataFromURL
+    capath=HTTPRequests.getCACertPath())
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1706/lib/python2.7/site-packages/WMCore/Services/pycurl_manager.py", line 207, in request
+    raise exc
+HTTPException: url=https://cmsweb.cern.ch/scheddmon/0137/cms535/170703_175420:ciperez_crab_tutorial_July2017_MC_analysis/status_cache, code=403, reason=Forbidden, headers={'Content-Length': '366', 'Set-Cookie': 'cms-auth=f1abaee4af30c75386638a3921722e74c64ec283baf626c9e96b6b1c2b899b540aa4f79cf87bd760;path=/;secure;httponly;expires=Thu, 01-Jan-1970 00:00:01 GMT', 'Server': 'Apache/2.2.15 (Red Hat)', 'Date': 'Mon, 03 Jul 2017 17:56:22 GMT', 'Content-Type': 'text/html; charset=iso-8859-1', 'CMS-Server-Time': 'D=5625 t=1499104582854408'}
+INFO 2017-07-03 19:56:23,291: 	 Log file is /afs/cern.ch/user/c/ciperez/OWNAnalyzer/CMSSW_8_0_13_patch1/src/triphoton/CRAB3-tutorial/crab_projects/crab_tutorial_July2017_MC_analysis/crab.log
+DEBUG 2017-07-03 20:00:20,278: 	 Executing command: 'status'
+DEBUG 2017-07-03 20:00:20,278: 	 Found CRAB cache file /afs/cern.ch/user/c/ciperez/.crab3
+DEBUG 2017-07-03 20:00:20,373: 	 Checking credentials
+DEBUG 2017-07-03 20:00:20,374: 	 Found proxy file /tmp/x509up_u81686
+DEBUG 2017-07-03 20:00:20,374: 	 Getting proxy life time left
+DEBUG 2017-07-03 20:00:22,628: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u81686 -timeleft
+ output : 602728
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 20:00:23,544: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u81686 -actimeleft
+ output : 602726
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 20:00:23,544: 	 Proxy valid for 167:25:28 hours
+DEBUG 2017-07-03 20:00:23,670: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ciperez/CN=773459/CN=Cilicia Uzziel Perez
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 20:00:23,671: 	 Checking credentials
+DEBUG 2017-07-03 20:00:23,671: 	 Found proxy file /tmp/x509up_u81686
+DEBUG 2017-07-03 20:00:23,671: 	 Getting proxy life time left
+DEBUG 2017-07-03 20:00:24,491: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u81686 -timeleft
+ output : 602726
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 20:00:25,413: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u81686 -actimeleft
+ output : 602724
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 20:00:25,413: 	 Proxy valid for 167:25:26 hours
+DEBUG 2017-07-03 20:00:26,224: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108|0105|0109).cern.ch
+DEBUG 2017-07-03 20:00:26,342: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ciperez/CN=773459/CN=Cilicia Uzziel Perez
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 20:00:26,342: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2017-07-03 20:00:26,342: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ciperez/CN=773459/CN=Cilicia Uzziel Perez_cmsweb.cern.ch for credential name
+DEBUG 2017-07-03 20:00:26,955: 	 Executing : 
+ command : myproxy-info -l 87563fafcc81b81d7383d27ab3acabdf21124584 -s myproxy.cern.ch
+ output : username: 87563fafcc81b81d7383d27ab3acabdf21124584
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ciperez/CN=773459/CN=Cilicia Uzziel Perez
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108|0105|0109).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108|0105|0109).cern.ch
+  timeleft: 719:42:54  (30.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 20:00:26,956: 	 Myproxy is valid: 2590974
+DEBUG 2017-07-03 20:00:26,956: 	 Command use: status
+DEBUG 2017-07-03 20:00:26,956: 	 Options use: ['-d', 'crab_projects/crab_tutorial_July2017_MC_analysis']
+DEBUG 2017-07-03 20:00:27,322: 	 CRABClient version: 3.3.1706
+DEBUG 2017-07-03 20:00:27,322: 	 Instance is prod
+DEBUG 2017-07-03 20:00:27,322: 	 Server base url is cmsweb.cern.ch
+DEBUG 2017-07-03 20:00:27,322: 	 Command url /crabserver/prod/workflow
+DEBUG 2017-07-03 20:00:27,744: 	 Got information from server oracle database: {u'result': [u'170703_175420:ciperez_crab_tutorial_July2017_MC_analysis', u'None', u'SUBMITTED', u'2017-07-03 17:54:20.863784', u'None', u'2017-07-03 17:55:45.016879', u'None', u'CMSSW_8_0_13_patch1', u'slc6_amd64_gcc530', u'/GenericTTbar/HC-CMSSW_5_3_1_START53_V5-v1/GEN-SIM-RECO', u'[]', u'[]', u'FileBased', u"{'splitOnRun': False, 'halt_job_on_file_boundaries': False, 'files_per_job': 10, 'runs': [], 'lumis': []}", u'0', u'17b0128e57a4b452491730f11a4a4cc39b0ecaac58912ef9398875acfe5d339a.tar.gz', u'https://cmsweb.cern.ch/crabcache', u'ciperez', u'/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ciperez/CN=773459/CN=Cilicia Uzziel Perez', u'cms', u'None', u'None', u'CRAB3_tutorial_May2015_MC_analysis-00000000000000000000000000000000', u'T2_US_Nebraska', u'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', u'T', u'Analysis', u'{}', u'[]', u'T', u'vocms052', u'[]', u'1250', u'1', u'2000', u'10', u'None', u'http://vocms0137.cern.ch/mon/cms535/170703_175420:ciperez_crab_tutorial_July2017_MC_analysis', u'None', u'None', u'[]', u'[]', u'[]', u'pythia', u'[]', u'[]', u"['output.root']", u'https://cmsweb.cern.ch/crabserver/prod', u'None', u'0', u'cmsgwms-collector-global.cern.ch:9620,cmssrv221.fnal.gov:9620', u'crab3@vocms0137.cern.ch', u'F', u'[]', u'T', u'/store/user/ciperez/', u'F', u'None', u'F', u'F', u'F', u'None', u'GenericTTbar', u'filetransfers', u'SUBMIT', u'9737582', u'9026ddb8a4f665adace538b9fadce4bf81f6a87167fb13dad887f703b174e8cb.tar.gz', u'188.184.95.2', u'F', u'None'], u'desc': {u'columns': [u'tm_taskname', u'panda_jobset_id', u'tm_task_status', u'tm_start_time', u'tm_start_injection', u'tm_end_injection', u'tm_task_failure', u'tm_job_sw', u'tm_job_arch', u'tm_input_dataset', u'tm_site_whitelist', u'tm_site_blacklist', u'tm_split_algo', u'tm_split_args', u'tm_totalunits', u'tm_user_sandbox', u'tm_cache_url', u'tm_username', u'tm_user_dn', u'tm_user_vo', u'tm_user_role', u'tm_user_group', u'tm_publish_name', u'tm_asyncdest', u'tm_dbs_url', u'tm_publish_dbs_url', u'tm_publication', u'tm_job_type', u'tm_arguments', u'panda_resubmitted_jobs', u'tm_save_logs', u'tw_name', u'tm_user_infiles', u'tm_maxjobruntime', u'tm_numcores', u'tm_maxmemory', u'tm_priority', u'tm_output_dataset', u'tm_user_webdir', u'tm_activity', u'tm_scriptexe', u'tm_scriptargs', u'tm_extrajdl', u'tm_task_warnings', u'tm_generator', u'tm_outfiles', u'tm_tfile_outfiles', u'tm_edm_outfiles', u'tm_asourl', u'tm_events_per_lumi', u'tm_use_parent', u'tm_collector', u'tm_schedd', u'tm_dry_run', u'tm_user_files', u'tm_transfer_outputs', u'tm_output_lfn', u'tm_ignore_locality', u'tm_fail_limit', u'tm_one_event_mode', u'tm_publish_groupname', u'tm_nonvalid_input_dataset', u'tm_secondary_input_dataset', u'tm_primary_dataset', u'tm_asodb', u'tm_task_command', u'clusterid', u'tm_debug_files', u'tm_submitter_ip_addr', u'tm_ignore_global_blacklist', u'tm_last_publication']}}
+INFO 2017-07-03 20:00:27,745: 	 CRAB project directory:		/afs/cern.ch/user/c/ciperez/OWNAnalyzer/CMSSW_8_0_13_patch1/src/triphoton/CRAB3-tutorial/crab_projects/crab_tutorial_July2017_MC_analysis
+INFO 2017-07-03 20:00:27,745: 	 Task name:			170703_175420:ciperez_crab_tutorial_July2017_MC_analysis
+INFO 2017-07-03 20:00:27,745: 	 Grid scheduler:			crab3@vocms0137.cern.ch
+INFO 2017-07-03 20:00:27,745: 	 Status on the CRAB server:	SUBMITTED
+INFO 2017-07-03 20:00:27,745: 	 Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/170703_175420%3Aciperez_crab_tutorial_July2017_MC_analysis
+INFO 2017-07-03 20:00:27,745: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=ciperez&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=170703_175420%3Aciperez_crab_tutorial_July2017_MC_analysis
+DEBUG 2017-07-03 20:00:27,746: 	 The CRAB server submitted your task to the Grid scheduler (cluster ID: 9737582)
+DEBUG 2017-07-03 20:00:27,746: 	 Webdir is located at http://vocms0137.cern.ch/mon/cms535/170703_175420:ciperez_crab_tutorial_July2017_MC_analysis
+DEBUG 2017-07-03 20:00:28,302: 	 Proxied webdir is located at https://cmsweb.cern.ch/scheddmon/0137/cms535/170703_175420:ciperez_crab_tutorial_July2017_MC_analysis
+DEBUG 2017-07-03 20:00:28,302: 	 Retrieving 'status_cache' file from https://cmsweb.cern.ch/scheddmon/0137/cms535/170703_175420:ciperez_crab_tutorial_July2017_MC_analysis/status_cache
+DEBUG 2017-07-03 20:00:28,618: 	 Got information from status cache file: {'11': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1499104542.0], 'JobIds': ['9737590.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '10': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1499104543.0], 'JobIds': ['9737594.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '13': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1499104544.0], 'JobIds': ['9737602.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '12': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1499104543.0], 'JobIds': ['9737593.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '15': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1499104544.0], 'JobIds': ['9737599.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '14': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1499104544.0], 'JobIds': ['9737600.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '17': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1499104544.0], 'JobIds': ['9737597.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '16': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1499104544.0], 'JobIds': ['9737601.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '18': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1499104544.0], 'JobIds': ['9737598.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '1': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1499104543.0], 'JobIds': ['9737591.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '3': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1499104541.0], 'JobIds': ['9737586.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '2': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1499104542.0], 'JobIds': ['9737588.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '5': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1499104543.0], 'JobIds': ['9737595.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '4': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1499104542.0], 'JobIds': ['9737589.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '7': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1499104542.0], 'JobIds': ['9737587.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '6': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1499104541.0], 'JobIds': ['9737585.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '9': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1499104544.0], 'JobIds': ['9737596.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '8': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1499104543.0], 'JobIds': ['9737592.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}}
+INFO 2017-07-03 20:00:28,618: 	 Status on the scheduler:	SUBMITTED
+INFO 2017-07-03 20:00:28,618: 	 
+Jobs status:                    idle          100.0% (18/18)
+INFO 2017-07-03 20:00:28,618: 	 
+No publication information available yet
+INFO 2017-07-03 20:00:29,163: 	 Log file is /afs/cern.ch/user/c/ciperez/OWNAnalyzer/CMSSW_8_0_13_patch1/src/triphoton/CRAB3-tutorial/crab_projects/crab_tutorial_July2017_MC_analysis/crab.log
+DEBUG 2017-07-03 20:15:34,541: 	 Executing command: 'status'
+DEBUG 2017-07-03 20:15:34,541: 	 Found CRAB cache file /afs/cern.ch/user/c/ciperez/.crab3
+DEBUG 2017-07-03 20:15:34,578: 	 Checking credentials
+DEBUG 2017-07-03 20:15:34,578: 	 Found proxy file /tmp/x509up_u81686
+DEBUG 2017-07-03 20:15:34,578: 	 Getting proxy life time left
+DEBUG 2017-07-03 20:15:36,035: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u81686 -timeleft
+ output : 601814
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 20:15:36,960: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u81686 -actimeleft
+ output : 601813
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 20:15:36,960: 	 Proxy valid for 167:10:14 hours
+DEBUG 2017-07-03 20:15:37,267: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ciperez/CN=773459/CN=Cilicia Uzziel Perez
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 20:15:37,268: 	 Checking credentials
+DEBUG 2017-07-03 20:15:37,268: 	 Found proxy file /tmp/x509up_u81686
+DEBUG 2017-07-03 20:15:37,268: 	 Getting proxy life time left
+DEBUG 2017-07-03 20:15:38,302: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u81686 -timeleft
+ output : 601812
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 20:15:39,228: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u81686 -actimeleft
+ output : 601810
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 20:15:39,228: 	 Proxy valid for 167:10:12 hours
+DEBUG 2017-07-03 20:15:39,774: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108|0105|0109).cern.ch
+DEBUG 2017-07-03 20:15:39,891: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ciperez/CN=773459/CN=Cilicia Uzziel Perez
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 20:15:39,891: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2017-07-03 20:15:39,891: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ciperez/CN=773459/CN=Cilicia Uzziel Perez_cmsweb.cern.ch for credential name
+DEBUG 2017-07-03 20:15:40,710: 	 Executing : 
+ command : myproxy-info -l 87563fafcc81b81d7383d27ab3acabdf21124584 -s myproxy.cern.ch
+ output : username: 87563fafcc81b81d7383d27ab3acabdf21124584
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ciperez/CN=773459/CN=Cilicia Uzziel Perez
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108|0105|0109).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108|0105|0109).cern.ch
+  timeleft: 719:27:40  (30.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 20:15:40,711: 	 Myproxy is valid: 2590060
+DEBUG 2017-07-03 20:15:40,711: 	 Command use: status
+DEBUG 2017-07-03 20:15:40,711: 	 Options use: ['-d', 'crab_projects/crab_tutorial_July2017_MC_analysis']
+DEBUG 2017-07-03 20:15:41,112: 	 CRABClient version: 3.3.1706
+DEBUG 2017-07-03 20:15:41,112: 	 Instance is prod
+DEBUG 2017-07-03 20:15:41,112: 	 Server base url is cmsweb.cern.ch
+DEBUG 2017-07-03 20:15:41,112: 	 Command url /crabserver/prod/workflow
+DEBUG 2017-07-03 20:15:41,508: 	 Got information from server oracle database: {u'result': [u'170703_175420:ciperez_crab_tutorial_July2017_MC_analysis', u'None', u'SUBMITTED', u'2017-07-03 17:54:20.863784', u'None', u'2017-07-03 17:55:45.016879', u'None', u'CMSSW_8_0_13_patch1', u'slc6_amd64_gcc530', u'/GenericTTbar/HC-CMSSW_5_3_1_START53_V5-v1/GEN-SIM-RECO', u'[]', u'[]', u'FileBased', u"{'splitOnRun': False, 'halt_job_on_file_boundaries': False, 'files_per_job': 10, 'runs': [], 'lumis': []}", u'0', u'17b0128e57a4b452491730f11a4a4cc39b0ecaac58912ef9398875acfe5d339a.tar.gz', u'https://cmsweb.cern.ch/crabcache', u'ciperez', u'/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ciperez/CN=773459/CN=Cilicia Uzziel Perez', u'cms', u'None', u'None', u'CRAB3_tutorial_May2015_MC_analysis-00000000000000000000000000000000', u'T2_US_Nebraska', u'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', u'T', u'Analysis', u'{}', u'[]', u'T', u'vocms052', u'[]', u'1250', u'1', u'2000', u'10', u'None', u'http://vocms0137.cern.ch/mon/cms535/170703_175420:ciperez_crab_tutorial_July2017_MC_analysis', u'None', u'None', u'[]', u'[]', u'[]', u'pythia', u'[]', u'[]', u"['output.root']", u'https://cmsweb.cern.ch/crabserver/prod', u'None', u'0', u'cmsgwms-collector-global.cern.ch:9620,cmssrv221.fnal.gov:9620', u'crab3@vocms0137.cern.ch', u'F', u'[]', u'T', u'/store/user/ciperez/', u'F', u'None', u'F', u'F', u'F', u'None', u'GenericTTbar', u'filetransfers', u'SUBMIT', u'9737582', u'9026ddb8a4f665adace538b9fadce4bf81f6a87167fb13dad887f703b174e8cb.tar.gz', u'188.184.95.2', u'F', u'None'], u'desc': {u'columns': [u'tm_taskname', u'panda_jobset_id', u'tm_task_status', u'tm_start_time', u'tm_start_injection', u'tm_end_injection', u'tm_task_failure', u'tm_job_sw', u'tm_job_arch', u'tm_input_dataset', u'tm_site_whitelist', u'tm_site_blacklist', u'tm_split_algo', u'tm_split_args', u'tm_totalunits', u'tm_user_sandbox', u'tm_cache_url', u'tm_username', u'tm_user_dn', u'tm_user_vo', u'tm_user_role', u'tm_user_group', u'tm_publish_name', u'tm_asyncdest', u'tm_dbs_url', u'tm_publish_dbs_url', u'tm_publication', u'tm_job_type', u'tm_arguments', u'panda_resubmitted_jobs', u'tm_save_logs', u'tw_name', u'tm_user_infiles', u'tm_maxjobruntime', u'tm_numcores', u'tm_maxmemory', u'tm_priority', u'tm_output_dataset', u'tm_user_webdir', u'tm_activity', u'tm_scriptexe', u'tm_scriptargs', u'tm_extrajdl', u'tm_task_warnings', u'tm_generator', u'tm_outfiles', u'tm_tfile_outfiles', u'tm_edm_outfiles', u'tm_asourl', u'tm_events_per_lumi', u'tm_use_parent', u'tm_collector', u'tm_schedd', u'tm_dry_run', u'tm_user_files', u'tm_transfer_outputs', u'tm_output_lfn', u'tm_ignore_locality', u'tm_fail_limit', u'tm_one_event_mode', u'tm_publish_groupname', u'tm_nonvalid_input_dataset', u'tm_secondary_input_dataset', u'tm_primary_dataset', u'tm_asodb', u'tm_task_command', u'clusterid', u'tm_debug_files', u'tm_submitter_ip_addr', u'tm_ignore_global_blacklist', u'tm_last_publication']}}
+INFO 2017-07-03 20:15:41,508: 	 CRAB project directory:		/afs/cern.ch/user/c/ciperez/OWNAnalyzer/CMSSW_8_0_13_patch1/src/triphoton/CRAB3-tutorial/crab_projects/crab_tutorial_July2017_MC_analysis
+INFO 2017-07-03 20:15:41,508: 	 Task name:			170703_175420:ciperez_crab_tutorial_July2017_MC_analysis
+INFO 2017-07-03 20:15:41,508: 	 Grid scheduler:			crab3@vocms0137.cern.ch
+INFO 2017-07-03 20:15:41,509: 	 Status on the CRAB server:	SUBMITTED
+INFO 2017-07-03 20:15:41,509: 	 Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/170703_175420%3Aciperez_crab_tutorial_July2017_MC_analysis
+INFO 2017-07-03 20:15:41,509: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=ciperez&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=170703_175420%3Aciperez_crab_tutorial_July2017_MC_analysis
+DEBUG 2017-07-03 20:15:41,509: 	 The CRAB server submitted your task to the Grid scheduler (cluster ID: 9737582)
+DEBUG 2017-07-03 20:15:41,509: 	 Webdir is located at http://vocms0137.cern.ch/mon/cms535/170703_175420:ciperez_crab_tutorial_July2017_MC_analysis
+DEBUG 2017-07-03 20:15:41,862: 	 Proxied webdir is located at https://cmsweb.cern.ch/scheddmon/0137/cms535/170703_175420:ciperez_crab_tutorial_July2017_MC_analysis
+DEBUG 2017-07-03 20:15:41,862: 	 Retrieving 'status_cache' file from https://cmsweb.cern.ch/scheddmon/0137/cms535/170703_175420:ciperez_crab_tutorial_July2017_MC_analysis/status_cache
+DEBUG 2017-07-03 20:15:42,235: 	 Got information from status cache file: {'11': {'Retries': 0, 'WallDurations': [10.0, 635.0], 'StartTimes': [1499104681.0], 'SubmitTimes': [1499104542.0], 'JobIds': ['9737590.0'], 'EndTimes': [1499105316.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [499060], 'TotalUserCpuTimeHistory': [118], 'SiteHistory': ['Unknown', 'T2_US_Wisconsin'], 'TotalSysCpuTimeHistory': [17]}, '10': {'Retries': 0, 'WallDurations': [9.0, 363.0], 'StartTimes': [1499104681.0], 'SubmitTimes': [1499104543.0], 'JobIds': ['9737594.0'], 'EndTimes': [1499105044.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [595864], 'TotalUserCpuTimeHistory': [102], 'SiteHistory': ['Unknown', 'T2_US_MIT'], 'TotalSysCpuTimeHistory': [12]}, '13': {'Retries': 0, 'WallDurations': [8.0, 613.0], 'StartTimes': [1499104681.0], 'SubmitTimes': [1499104544.0], 'JobIds': ['9737602.0'], 'EndTimes': [1499105294.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [503768], 'TotalUserCpuTimeHistory': [123], 'SiteHistory': ['Unknown', 'T2_US_Wisconsin'], 'TotalSysCpuTimeHistory': [19]}, '12': {'Retries': 0, 'WallDurations': [8.0, 414.0], 'StartTimes': [1499104685.0], 'SubmitTimes': [1499104543.0], 'JobIds': ['9737593.0'], 'EndTimes': [1499105099.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [580896], 'TotalUserCpuTimeHistory': [110], 'SiteHistory': ['Unknown', 'T2_US_UCSD'], 'TotalSysCpuTimeHistory': [16]}, '15': {'Retries': 0, 'WallDurations': [9.0, 309.0], 'StartTimes': [1499104681.0], 'SubmitTimes': [1499104544.0], 'JobIds': ['9737599.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [597380], 'TotalUserCpuTimeHistory': [30.0], 'SiteHistory': ['Unknown', 'T2_US_Florida'], 'TotalSysCpuTimeHistory': [3.0]}, '14': {'Retries': 0, 'WallDurations': [9.0, 255.0], 'StartTimes': [1499104680.0], 'SubmitTimes': [1499104544.0], 'JobIds': ['9737600.0'], 'EndTimes': [1499104935.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [2644], 'TotalUserCpuTimeHistory': [64], 'SiteHistory': ['Unknown', 'T2_US_Purdue'], 'TotalSysCpuTimeHistory': [3]}, '17': {'Retries': 0, 'WallDurations': [9.0, 504.0], 'StartTimes': [1499104685.0], 'SubmitTimes': [1499104544.0], 'JobIds': ['9737597.0'], 'EndTimes': [1499105189.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [570552], 'TotalUserCpuTimeHistory': [101], 'SiteHistory': ['Unknown', 'T2_US_UCSD'], 'TotalSysCpuTimeHistory': [14]}, '16': {'Retries': 0, 'WallDurations': [9.0, 310.0], 'StartTimes': [1499104682.0], 'SubmitTimes': [1499104544.0], 'JobIds': ['9737601.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [605644], 'TotalUserCpuTimeHistory': [68.0], 'SiteHistory': ['Unknown', 'T2_US_Florida'], 'TotalSysCpuTimeHistory': [8.0]}, '18': {'Retries': 0, 'WallDurations': [220.0, 223.0], 'StartTimes': [1499104681.0], 'SubmitTimes': [1499104544.0], 'JobIds': ['9737598.0'], 'EndTimes': [1499104904.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [25712], 'TotalUserCpuTimeHistory': [102], 'SiteHistory': ['Unknown', 'T2_US_Florida'], 'TotalSysCpuTimeHistory': [13]}, '1': {'Retries': 0, 'WallDurations': [9.0, 384.0], 'StartTimes': [1499104682.0], 'SubmitTimes': [1499104543.0], 'JobIds': ['9737591.0'], 'EndTimes': [1499105066.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [593876], 'TotalUserCpuTimeHistory': [102], 'SiteHistory': ['Unknown', 'T2_US_MIT'], 'TotalSysCpuTimeHistory': [7]}, '3': {'Retries': 0, 'WallDurations': [9.0, 261.0], 'StartTimes': [1499104681.0], 'SubmitTimes': [1499104541.0], 'JobIds': ['9737586.0'], 'EndTimes': [1499104942.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [16712], 'TotalUserCpuTimeHistory': [65], 'SiteHistory': ['Unknown', 'T2_US_Purdue'], 'TotalSysCpuTimeHistory': [4]}, '2': {'Retries': 0, 'WallDurations': [9.0, 310.0], 'StartTimes': [1499104682.0], 'SubmitTimes': [1499104542.0], 'JobIds': ['9737588.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [596852], 'TotalUserCpuTimeHistory': [25.0], 'SiteHistory': ['Unknown', 'T2_US_Florida'], 'TotalSysCpuTimeHistory': [4.0]}, '5': {'Retries': 0, 'WallDurations': [9.0, 386.0], 'StartTimes': [1499104682.0], 'SubmitTimes': [1499104543.0], 'JobIds': ['9737595.0'], 'EndTimes': [1499105068.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [585488], 'TotalUserCpuTimeHistory': [108], 'SiteHistory': ['Unknown', 'T2_US_MIT'], 'TotalSysCpuTimeHistory': [33]}, '4': {'Retries': 0, 'WallDurations': [9.0, 640.0], 'StartTimes': [1499104682.0], 'SubmitTimes': [1499104542.0], 'JobIds': ['9737589.0'], 'EndTimes': [1499105322.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [581432], 'TotalUserCpuTimeHistory': [149], 'SiteHistory': ['Unknown', 'T2_US_Wisconsin'], 'TotalSysCpuTimeHistory': [27]}, '7': {'Retries': 0, 'WallDurations': [10.0, 343.0], 'StartTimes': [1499104681.0], 'SubmitTimes': [1499104542.0], 'JobIds': ['9737587.0'], 'EndTimes': [1499105024.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [562976], 'TotalUserCpuTimeHistory': [88], 'SiteHistory': ['Unknown', 'T2_US_MIT'], 'TotalSysCpuTimeHistory': [13]}, '6': {'Retries': 0, 'WallDurations': [8.0, 594.0], 'StartTimes': [1499104682.0], 'SubmitTimes': [1499104541.0], 'JobIds': ['9737585.0'], 'EndTimes': [1499105276.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [502684], 'TotalUserCpuTimeHistory': [113], 'SiteHistory': ['Unknown', 'T2_US_Wisconsin'], 'TotalSysCpuTimeHistory': [21]}, '9': {'Retries': 0, 'WallDurations': [10.0, 612.0], 'StartTimes': [1499104681.0], 'SubmitTimes': [1499104544.0], 'JobIds': ['9737596.0'], 'EndTimes': [1499105293.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [492180], 'TotalUserCpuTimeHistory': [110], 'SiteHistory': ['Unknown', 'T2_US_Wisconsin'], 'TotalSysCpuTimeHistory': [26]}, '8': {'Retries': 0, 'WallDurations': [9.0, 362.0], 'StartTimes': [1499104682.0], 'SubmitTimes': [1499104543.0], 'JobIds': ['9737592.0'], 'EndTimes': [1499105044.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [579240], 'TotalUserCpuTimeHistory': [117], 'SiteHistory': ['Unknown', 'T2_US_MIT'], 'TotalSysCpuTimeHistory': [13]}}
+INFO 2017-07-03 20:15:42,235: 	 Status on the scheduler:	SUBMITTED
+INFO 2017-07-03 20:15:42,236: 	 
+Jobs status:                    running        16.7% ( 3/18)
+INFO 2017-07-03 20:15:42,236: 	 				transferring   83.3% (15/18)
+INFO 2017-07-03 20:15:42,236: 	 
+No publication information available yet
+INFO 2017-07-03 20:15:42,659: 	 Log file is /afs/cern.ch/user/c/ciperez/OWNAnalyzer/CMSSW_8_0_13_patch1/src/triphoton/CRAB3-tutorial/crab_projects/crab_tutorial_July2017_MC_analysis/crab.log
+DEBUG 2017-07-03 20:39:02,752: 	 Executing command: 'status'
+DEBUG 2017-07-03 20:39:02,752: 	 Found CRAB cache file /afs/cern.ch/user/c/ciperez/.crab3
+DEBUG 2017-07-03 20:39:02,760: 	 Checking credentials
+DEBUG 2017-07-03 20:39:02,761: 	 Found proxy file /tmp/x509up_u81686
+DEBUG 2017-07-03 20:39:02,762: 	 Getting proxy life time left
+DEBUG 2017-07-03 20:39:03,372: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u81686 -timeleft
+ output : 600407
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 20:39:03,880: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u81686 -actimeleft
+ output : 600406
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 20:39:03,880: 	 Proxy valid for 166:46:47 hours
+DEBUG 2017-07-03 20:39:03,998: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ciperez/CN=773459/CN=Cilicia Uzziel Perez
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 20:39:03,998: 	 Checking credentials
+DEBUG 2017-07-03 20:39:03,998: 	 Found proxy file /tmp/x509up_u81686
+DEBUG 2017-07-03 20:39:03,998: 	 Getting proxy life time left
+DEBUG 2017-07-03 20:39:04,509: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u81686 -timeleft
+ output : 600406
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 20:39:05,013: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u81686 -actimeleft
+ output : 600405
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 20:39:05,013: 	 Proxy valid for 166:46:46 hours
+DEBUG 2017-07-03 20:39:05,394: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108|0105|0109).cern.ch
+DEBUG 2017-07-03 20:39:05,503: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ciperez/CN=773459/CN=Cilicia Uzziel Perez
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 20:39:05,503: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2017-07-03 20:39:05,503: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ciperez/CN=773459/CN=Cilicia Uzziel Perez_cmsweb.cern.ch for credential name
+DEBUG 2017-07-03 20:39:05,807: 	 Executing : 
+ command : myproxy-info -l 87563fafcc81b81d7383d27ab3acabdf21124584 -s myproxy.cern.ch
+ output : username: 87563fafcc81b81d7383d27ab3acabdf21124584
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ciperez/CN=773459/CN=Cilicia Uzziel Perez
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108|0105|0109).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108|0105|0109).cern.ch
+  timeleft: 719:04:15  (30.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 20:39:05,808: 	 Myproxy is valid: 2588655
+DEBUG 2017-07-03 20:39:05,808: 	 Command use: status
+DEBUG 2017-07-03 20:39:05,808: 	 Options use: ['-d', 'crab_projects/crab_tutorial_July2017_MC_analysis']
+DEBUG 2017-07-03 20:39:06,494: 	 CRABClient version: 3.3.1706
+DEBUG 2017-07-03 20:39:06,494: 	 Instance is prod
+DEBUG 2017-07-03 20:39:06,494: 	 Server base url is cmsweb.cern.ch
+DEBUG 2017-07-03 20:39:06,494: 	 Command url /crabserver/prod/workflow
+DEBUG 2017-07-03 20:39:06,865: 	 Got information from server oracle database: {u'result': [u'170703_175420:ciperez_crab_tutorial_July2017_MC_analysis', u'None', u'SUBMITTED', u'2017-07-03 17:54:20.863784', u'None', u'2017-07-03 17:55:45.016879', u'None', u'CMSSW_8_0_13_patch1', u'slc6_amd64_gcc530', u'/GenericTTbar/HC-CMSSW_5_3_1_START53_V5-v1/GEN-SIM-RECO', u'[]', u'[]', u'FileBased', u"{'splitOnRun': False, 'halt_job_on_file_boundaries': False, 'files_per_job': 10, 'runs': [], 'lumis': []}", u'0', u'17b0128e57a4b452491730f11a4a4cc39b0ecaac58912ef9398875acfe5d339a.tar.gz', u'https://cmsweb.cern.ch/crabcache', u'ciperez', u'/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ciperez/CN=773459/CN=Cilicia Uzziel Perez', u'cms', u'None', u'None', u'CRAB3_tutorial_May2015_MC_analysis-00000000000000000000000000000000', u'T2_US_Nebraska', u'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', u'T', u'Analysis', u'{}', u'[]', u'T', u'vocms052', u'[]', u'1250', u'1', u'2000', u'10', u"['/GenericTTbar/ciperez-CRAB3_tutorial_May2015_MC_analysis-37773c17ce2994cf16892d5f04945e41/USER']", u'http://vocms0137.cern.ch/mon/cms535/170703_175420:ciperez_crab_tutorial_July2017_MC_analysis', u'None', u'None', u'[]', u'[]', u'[]', u'pythia', u'[]', u'[]', u"['output.root']", u'https://cmsweb.cern.ch/crabserver/prod', u'None', u'0', u'cmsgwms-collector-global.cern.ch:9620,cmssrv221.fnal.gov:9620', u'crab3@vocms0137.cern.ch', u'F', u'[]', u'T', u'/store/user/ciperez/', u'F', u'None', u'F', u'F', u'F', u'None', u'GenericTTbar', u'filetransfers', u'SUBMIT', u'9737582', u'9026ddb8a4f665adace538b9fadce4bf81f6a87167fb13dad887f703b174e8cb.tar.gz', u'188.184.95.2', u'F', u'2017-07-03 18:37:36.952780'], u'desc': {u'columns': [u'tm_taskname', u'panda_jobset_id', u'tm_task_status', u'tm_start_time', u'tm_start_injection', u'tm_end_injection', u'tm_task_failure', u'tm_job_sw', u'tm_job_arch', u'tm_input_dataset', u'tm_site_whitelist', u'tm_site_blacklist', u'tm_split_algo', u'tm_split_args', u'tm_totalunits', u'tm_user_sandbox', u'tm_cache_url', u'tm_username', u'tm_user_dn', u'tm_user_vo', u'tm_user_role', u'tm_user_group', u'tm_publish_name', u'tm_asyncdest', u'tm_dbs_url', u'tm_publish_dbs_url', u'tm_publication', u'tm_job_type', u'tm_arguments', u'panda_resubmitted_jobs', u'tm_save_logs', u'tw_name', u'tm_user_infiles', u'tm_maxjobruntime', u'tm_numcores', u'tm_maxmemory', u'tm_priority', u'tm_output_dataset', u'tm_user_webdir', u'tm_activity', u'tm_scriptexe', u'tm_scriptargs', u'tm_extrajdl', u'tm_task_warnings', u'tm_generator', u'tm_outfiles', u'tm_tfile_outfiles', u'tm_edm_outfiles', u'tm_asourl', u'tm_events_per_lumi', u'tm_use_parent', u'tm_collector', u'tm_schedd', u'tm_dry_run', u'tm_user_files', u'tm_transfer_outputs', u'tm_output_lfn', u'tm_ignore_locality', u'tm_fail_limit', u'tm_one_event_mode', u'tm_publish_groupname', u'tm_nonvalid_input_dataset', u'tm_secondary_input_dataset', u'tm_primary_dataset', u'tm_asodb', u'tm_task_command', u'clusterid', u'tm_debug_files', u'tm_submitter_ip_addr', u'tm_ignore_global_blacklist', u'tm_last_publication']}}
+INFO 2017-07-03 20:39:06,865: 	 CRAB project directory:		/afs/cern.ch/user/c/ciperez/OWNAnalyzer/CMSSW_8_0_13_patch1/src/triphoton/CRAB3-tutorial/crab_projects/crab_tutorial_July2017_MC_analysis
+INFO 2017-07-03 20:39:06,865: 	 Task name:			170703_175420:ciperez_crab_tutorial_July2017_MC_analysis
+INFO 2017-07-03 20:39:06,866: 	 Grid scheduler:			crab3@vocms0137.cern.ch
+INFO 2017-07-03 20:39:06,866: 	 Status on the CRAB server:	SUBMITTED
+INFO 2017-07-03 20:39:06,866: 	 Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/170703_175420%3Aciperez_crab_tutorial_July2017_MC_analysis
+INFO 2017-07-03 20:39:06,866: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=ciperez&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=170703_175420%3Aciperez_crab_tutorial_July2017_MC_analysis
+DEBUG 2017-07-03 20:39:06,866: 	 The CRAB server submitted your task to the Grid scheduler (cluster ID: 9737582)
+DEBUG 2017-07-03 20:39:06,866: 	 Webdir is located at http://vocms0137.cern.ch/mon/cms535/170703_175420:ciperez_crab_tutorial_July2017_MC_analysis
+DEBUG 2017-07-03 20:39:07,513: 	 Proxied webdir is located at https://cmsweb.cern.ch/scheddmon/0137/cms535/170703_175420:ciperez_crab_tutorial_July2017_MC_analysis
+DEBUG 2017-07-03 20:39:07,513: 	 Retrieving 'status_cache' file from https://cmsweb.cern.ch/scheddmon/0137/cms535/170703_175420:ciperez_crab_tutorial_July2017_MC_analysis/status_cache
+DEBUG 2017-07-03 20:39:07,821: 	 Got information from status cache file: {'11': {'Retries': 0, 'WallDurations': [10.0, 635.0], 'StartTimes': [1499104681.0], 'SubmitTimes': [1499104542.0], 'JobIds': ['9737590.0'], 'EndTimes': [1499105316.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [499060], 'TotalUserCpuTimeHistory': [118], 'SiteHistory': ['Unknown', 'T2_US_Wisconsin'], 'TotalSysCpuTimeHistory': [17]}, '10': {'Retries': 0, 'WallDurations': [9.0, 363.0], 'StartTimes': [1499104681.0], 'SubmitTimes': [1499104543.0], 'JobIds': ['9737594.0'], 'EndTimes': [1499105044.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [595864], 'TotalUserCpuTimeHistory': [102], 'SiteHistory': ['Unknown', 'T2_US_MIT'], 'TotalSysCpuTimeHistory': [12]}, '13': {'Retries': 0, 'WallDurations': [8.0, 613.0], 'StartTimes': [1499104681.0], 'SubmitTimes': [1499104544.0], 'JobIds': ['9737602.0'], 'EndTimes': [1499105294.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [503768], 'TotalUserCpuTimeHistory': [123], 'SiteHistory': ['Unknown', 'T2_US_Wisconsin'], 'TotalSysCpuTimeHistory': [19]}, '12': {'Retries': 0, 'WallDurations': [8.0, 414.0], 'StartTimes': [1499104685.0], 'SubmitTimes': [1499104543.0], 'JobIds': ['9737593.0'], 'EndTimes': [1499105099.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [580896], 'TotalUserCpuTimeHistory': [110], 'SiteHistory': ['Unknown', 'T2_US_UCSD'], 'TotalSysCpuTimeHistory': [16]}, '15': {'Retries': 0, 'WallDurations': [9.0, 2096.0], 'StartTimes': [1499104681.0], 'SubmitTimes': [1499104544.0], 'JobIds': ['9737599.0'], 'EndTimes': [1499106777.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [620892], 'TotalUserCpuTimeHistory': [143], 'SiteHistory': ['Unknown', 'T2_US_Florida'], 'TotalSysCpuTimeHistory': [34]}, '14': {'Retries': 0, 'WallDurations': [9.0, 255.0], 'StartTimes': [1499104680.0], 'SubmitTimes': [1499104544.0], 'JobIds': ['9737600.0'], 'EndTimes': [1499104935.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [2644], 'TotalUserCpuTimeHistory': [64], 'SiteHistory': ['Unknown', 'T2_US_Purdue'], 'TotalSysCpuTimeHistory': [3]}, '17': {'Retries': 0, 'WallDurations': [9.0, 504.0], 'StartTimes': [1499104685.0], 'SubmitTimes': [1499104544.0], 'JobIds': ['9737597.0'], 'EndTimes': [1499105189.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [570552], 'TotalUserCpuTimeHistory': [101], 'SiteHistory': ['Unknown', 'T2_US_UCSD'], 'TotalSysCpuTimeHistory': [14]}, '16': {'Retries': 0, 'WallDurations': [9.0, 2113.0], 'StartTimes': [1499104682.0], 'SubmitTimes': [1499104544.0], 'JobIds': ['9737601.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [608092], 'TotalUserCpuTimeHistory': [96.0], 'SiteHistory': ['Unknown', 'T2_US_Florida'], 'TotalSysCpuTimeHistory': [12.0]}, '18': {'Retries': 0, 'WallDurations': [220.0, 223.0], 'StartTimes': [1499104681.0], 'SubmitTimes': [1499104544.0], 'JobIds': ['9737598.0'], 'EndTimes': [1499104904.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [25712], 'TotalUserCpuTimeHistory': [102], 'SiteHistory': ['Unknown', 'T2_US_Florida'], 'TotalSysCpuTimeHistory': [13]}, '1': {'Retries': 0, 'WallDurations': [9.0, 384.0], 'StartTimes': [1499104682.0], 'SubmitTimes': [1499104543.0], 'JobIds': ['9737591.0'], 'EndTimes': [1499105066.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [593876], 'TotalUserCpuTimeHistory': [102], 'SiteHistory': ['Unknown', 'T2_US_MIT'], 'TotalSysCpuTimeHistory': [7]}, '3': {'Retries': 0, 'WallDurations': [9.0, 261.0], 'StartTimes': [1499104681.0], 'SubmitTimes': [1499104541.0], 'JobIds': ['9737586.0'], 'EndTimes': [1499104942.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [16712], 'TotalUserCpuTimeHistory': [65], 'SiteHistory': ['Unknown', 'T2_US_Purdue'], 'TotalSysCpuTimeHistory': [4]}, '2': {'Retries': 0, 'WallDurations': [9.0, 1812.0], 'StartTimes': [1499104682.0], 'SubmitTimes': [1499104542.0], 'JobIds': ['9737588.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [624376], 'TotalUserCpuTimeHistory': [91.0], 'SiteHistory': ['Unknown', 'T2_US_Florida'], 'TotalSysCpuTimeHistory': [19.0]}, '5': {'Retries': 0, 'WallDurations': [9.0, 386.0], 'StartTimes': [1499104682.0], 'SubmitTimes': [1499104543.0], 'JobIds': ['9737595.0'], 'EndTimes': [1499105068.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [585488], 'TotalUserCpuTimeHistory': [108], 'SiteHistory': ['Unknown', 'T2_US_MIT'], 'TotalSysCpuTimeHistory': [33]}, '4': {'Retries': 0, 'WallDurations': [9.0, 640.0], 'StartTimes': [1499104682.0], 'SubmitTimes': [1499104542.0], 'JobIds': ['9737589.0'], 'EndTimes': [1499105322.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [581432], 'TotalUserCpuTimeHistory': [149], 'SiteHistory': ['Unknown', 'T2_US_Wisconsin'], 'TotalSysCpuTimeHistory': [27]}, '7': {'Retries': 0, 'WallDurations': [10.0, 343.0], 'StartTimes': [1499104681.0], 'SubmitTimes': [1499104542.0], 'JobIds': ['9737587.0'], 'EndTimes': [1499105024.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [562976], 'TotalUserCpuTimeHistory': [88], 'SiteHistory': ['Unknown', 'T2_US_MIT'], 'TotalSysCpuTimeHistory': [13]}, '6': {'Retries': 0, 'WallDurations': [8.0, 594.0], 'StartTimes': [1499104682.0], 'SubmitTimes': [1499104541.0], 'JobIds': ['9737585.0'], 'EndTimes': [1499105276.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [502684], 'TotalUserCpuTimeHistory': [113], 'SiteHistory': ['Unknown', 'T2_US_Wisconsin'], 'TotalSysCpuTimeHistory': [21]}, '9': {'Retries': 0, 'WallDurations': [10.0, 612.0], 'StartTimes': [1499104681.0], 'SubmitTimes': [1499104544.0], 'JobIds': ['9737596.0'], 'EndTimes': [1499105293.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [492180], 'TotalUserCpuTimeHistory': [110], 'SiteHistory': ['Unknown', 'T2_US_Wisconsin'], 'TotalSysCpuTimeHistory': [26]}, '8': {'Retries': 0, 'WallDurations': [9.0, 362.0], 'StartTimes': [1499104682.0], 'SubmitTimes': [1499104543.0], 'JobIds': ['9737592.0'], 'EndTimes': [1499105044.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [579240], 'TotalUserCpuTimeHistory': [117], 'SiteHistory': ['Unknown', 'T2_US_MIT'], 'TotalSysCpuTimeHistory': [13]}}
+INFO 2017-07-03 20:39:07,821: 	 Status on the scheduler:	SUBMITTED
+INFO 2017-07-03 20:39:07,821: 	 
+Jobs status:                    finished       50.0% ( 9/18)
+INFO 2017-07-03 20:39:07,821: 	 				running        11.1% ( 2/18)
+INFO 2017-07-03 20:39:07,821: 	 				transferring   38.9% ( 7/18)
+INFO 2017-07-03 20:39:08,174: 	 
+Publication status:		acquired       27.8% ( 5/18)
+				done           55.6% (10/18)
+				new             5.6% ( 1/18)
+				unsubmitted    11.1% ( 2/18)
+INFO 2017-07-03 20:39:08,174: 	 
+Output dataset:			/GenericTTbar/ciperez-CRAB3_tutorial_May2015_MC_analysis-37773c17ce2994cf16892d5f04945e41/USER
+Output dataset DAS URL:		https://cmsweb.cern.ch/das/request?input=%2FGenericTTbar%2Fciperez-CRAB3_tutorial_May2015_MC_analysis-37773c17ce2994cf16892d5f04945e41%2FUSER&instance=prod%2Fphys03
+INFO 2017-07-03 20:39:08,196: 	 Log file is /afs/cern.ch/user/c/ciperez/OWNAnalyzer/CMSSW_8_0_13_patch1/src/triphoton/CRAB3-tutorial/crab_projects/crab_tutorial_July2017_MC_analysis/crab.log
+DEBUG 2017-07-03 21:02:42,567: 	 Executing command: 'status'
+DEBUG 2017-07-03 21:02:42,567: 	 Found CRAB cache file /afs/cern.ch/user/c/ciperez/.crab3
+DEBUG 2017-07-03 21:02:42,608: 	 Checking credentials
+DEBUG 2017-07-03 21:02:42,609: 	 Found proxy file /tmp/x509up_u81686
+DEBUG 2017-07-03 21:02:42,609: 	 Getting proxy life time left
+DEBUG 2017-07-03 21:02:43,112: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u81686 -timeleft
+ output : 598987
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 21:02:43,617: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u81686 -actimeleft
+ output : 598986
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 21:02:43,618: 	 Proxy valid for 166:23:07 hours
+DEBUG 2017-07-03 21:02:43,783: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ciperez/CN=773459/CN=Cilicia Uzziel Perez
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 21:02:43,783: 	 Checking credentials
+DEBUG 2017-07-03 21:02:43,783: 	 Found proxy file /tmp/x509up_u81686
+DEBUG 2017-07-03 21:02:43,783: 	 Getting proxy life time left
+DEBUG 2017-07-03 21:02:44,792: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u81686 -timeleft
+ output : 598986
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 21:02:45,305: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u81686 -actimeleft
+ output : 598984
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 21:02:45,305: 	 Proxy valid for 166:23:06 hours
+DEBUG 2017-07-03 21:02:45,663: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108|0105|0109).cern.ch
+DEBUG 2017-07-03 21:02:45,770: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ciperez/CN=773459/CN=Cilicia Uzziel Perez
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 21:02:45,770: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2017-07-03 21:02:45,771: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ciperez/CN=773459/CN=Cilicia Uzziel Perez_cmsweb.cern.ch for credential name
+DEBUG 2017-07-03 21:02:46,074: 	 Executing : 
+ command : myproxy-info -l 87563fafcc81b81d7383d27ab3acabdf21124584 -s myproxy.cern.ch
+ output : username: 87563fafcc81b81d7383d27ab3acabdf21124584
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ciperez/CN=773459/CN=Cilicia Uzziel Perez
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108|0105|0109).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108|0105|0109).cern.ch
+  timeleft: 718:40:34  (29.9 days)
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 21:02:46,075: 	 Myproxy is valid: 2587234
+DEBUG 2017-07-03 21:02:46,075: 	 Command use: status
+DEBUG 2017-07-03 21:02:46,075: 	 Options use: ['-d', 'crab_projects/crab_tutorial_July2017_MC_analysis']
+DEBUG 2017-07-03 21:02:46,505: 	 CRABClient version: 3.3.1706
+DEBUG 2017-07-03 21:02:46,505: 	 Instance is prod
+DEBUG 2017-07-03 21:02:46,505: 	 Server base url is cmsweb.cern.ch
+DEBUG 2017-07-03 21:02:46,505: 	 Command url /crabserver/prod/workflow
+DEBUG 2017-07-03 21:02:46,899: 	 Got information from server oracle database: {u'result': [u'170703_175420:ciperez_crab_tutorial_July2017_MC_analysis', u'None', u'SUBMITTED', u'2017-07-03 17:54:20.863784', u'None', u'2017-07-03 17:55:45.016879', u'None', u'CMSSW_8_0_13_patch1', u'slc6_amd64_gcc530', u'/GenericTTbar/HC-CMSSW_5_3_1_START53_V5-v1/GEN-SIM-RECO', u'[]', u'[]', u'FileBased', u"{'splitOnRun': False, 'halt_job_on_file_boundaries': False, 'files_per_job': 10, 'runs': [], 'lumis': []}", u'0', u'17b0128e57a4b452491730f11a4a4cc39b0ecaac58912ef9398875acfe5d339a.tar.gz', u'https://cmsweb.cern.ch/crabcache', u'ciperez', u'/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ciperez/CN=773459/CN=Cilicia Uzziel Perez', u'cms', u'None', u'None', u'CRAB3_tutorial_May2015_MC_analysis-00000000000000000000000000000000', u'T2_US_Nebraska', u'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', u'T', u'Analysis', u'{}', u'[]', u'T', u'vocms052', u'[]', u'1250', u'1', u'2000', u'10', u"['/GenericTTbar/ciperez-CRAB3_tutorial_May2015_MC_analysis-37773c17ce2994cf16892d5f04945e41/USER']", u'http://vocms0137.cern.ch/mon/cms535/170703_175420:ciperez_crab_tutorial_July2017_MC_analysis', u'None', u'None', u'[]', u'[]', u'[]', u'pythia', u'[]', u'[]', u"['output.root']", u'https://cmsweb.cern.ch/crabserver/prod', u'None', u'0', u'cmsgwms-collector-global.cern.ch:9620,cmssrv221.fnal.gov:9620', u'crab3@vocms0137.cern.ch', u'F', u'[]', u'T', u'/store/user/ciperez/', u'F', u'None', u'F', u'F', u'F', u'None', u'GenericTTbar', u'filetransfers', u'SUBMIT', u'9737582', u'9026ddb8a4f665adace538b9fadce4bf81f6a87167fb13dad887f703b174e8cb.tar.gz', u'188.184.95.2', u'F', u'2017-07-03 19:01:19.095169'], u'desc': {u'columns': [u'tm_taskname', u'panda_jobset_id', u'tm_task_status', u'tm_start_time', u'tm_start_injection', u'tm_end_injection', u'tm_task_failure', u'tm_job_sw', u'tm_job_arch', u'tm_input_dataset', u'tm_site_whitelist', u'tm_site_blacklist', u'tm_split_algo', u'tm_split_args', u'tm_totalunits', u'tm_user_sandbox', u'tm_cache_url', u'tm_username', u'tm_user_dn', u'tm_user_vo', u'tm_user_role', u'tm_user_group', u'tm_publish_name', u'tm_asyncdest', u'tm_dbs_url', u'tm_publish_dbs_url', u'tm_publication', u'tm_job_type', u'tm_arguments', u'panda_resubmitted_jobs', u'tm_save_logs', u'tw_name', u'tm_user_infiles', u'tm_maxjobruntime', u'tm_numcores', u'tm_maxmemory', u'tm_priority', u'tm_output_dataset', u'tm_user_webdir', u'tm_activity', u'tm_scriptexe', u'tm_scriptargs', u'tm_extrajdl', u'tm_task_warnings', u'tm_generator', u'tm_outfiles', u'tm_tfile_outfiles', u'tm_edm_outfiles', u'tm_asourl', u'tm_events_per_lumi', u'tm_use_parent', u'tm_collector', u'tm_schedd', u'tm_dry_run', u'tm_user_files', u'tm_transfer_outputs', u'tm_output_lfn', u'tm_ignore_locality', u'tm_fail_limit', u'tm_one_event_mode', u'tm_publish_groupname', u'tm_nonvalid_input_dataset', u'tm_secondary_input_dataset', u'tm_primary_dataset', u'tm_asodb', u'tm_task_command', u'clusterid', u'tm_debug_files', u'tm_submitter_ip_addr', u'tm_ignore_global_blacklist', u'tm_last_publication']}}
+INFO 2017-07-03 21:02:46,900: 	 CRAB project directory:		/afs/cern.ch/user/c/ciperez/OWNAnalyzer/CMSSW_8_0_13_patch1/src/triphoton/CRAB3-tutorial/crab_projects/crab_tutorial_July2017_MC_analysis
+INFO 2017-07-03 21:02:46,900: 	 Task name:			170703_175420:ciperez_crab_tutorial_July2017_MC_analysis
+INFO 2017-07-03 21:02:46,900: 	 Grid scheduler:			crab3@vocms0137.cern.ch
+INFO 2017-07-03 21:02:46,900: 	 Status on the CRAB server:	SUBMITTED
+INFO 2017-07-03 21:02:46,900: 	 Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/170703_175420%3Aciperez_crab_tutorial_July2017_MC_analysis
+INFO 2017-07-03 21:02:46,900: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=ciperez&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=170703_175420%3Aciperez_crab_tutorial_July2017_MC_analysis
+DEBUG 2017-07-03 21:02:46,900: 	 The CRAB server submitted your task to the Grid scheduler (cluster ID: 9737582)
+DEBUG 2017-07-03 21:02:46,900: 	 Webdir is located at http://vocms0137.cern.ch/mon/cms535/170703_175420:ciperez_crab_tutorial_July2017_MC_analysis
+DEBUG 2017-07-03 21:02:47,236: 	 Proxied webdir is located at https://cmsweb.cern.ch/scheddmon/0137/cms535/170703_175420:ciperez_crab_tutorial_July2017_MC_analysis
+DEBUG 2017-07-03 21:02:47,236: 	 Retrieving 'status_cache' file from https://cmsweb.cern.ch/scheddmon/0137/cms535/170703_175420:ciperez_crab_tutorial_July2017_MC_analysis/status_cache
+DEBUG 2017-07-03 21:02:47,536: 	 Got information from status cache file: {'11': {'Retries': 0, 'WallDurations': [10.0, 635.0], 'StartTimes': [1499104681.0], 'SubmitTimes': [1499104542.0], 'JobIds': ['9737590.0'], 'EndTimes': [1499105316.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [499060], 'TotalUserCpuTimeHistory': [118], 'SiteHistory': ['Unknown', 'T2_US_Wisconsin'], 'TotalSysCpuTimeHistory': [17]}, '10': {'Retries': 0, 'WallDurations': [9.0, 363.0], 'StartTimes': [1499104681.0], 'SubmitTimes': [1499104543.0], 'JobIds': ['9737594.0'], 'EndTimes': [1499105044.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [595864], 'TotalUserCpuTimeHistory': [102], 'SiteHistory': ['Unknown', 'T2_US_MIT'], 'TotalSysCpuTimeHistory': [12]}, '13': {'Retries': 0, 'WallDurations': [8.0, 613.0], 'StartTimes': [1499104681.0], 'SubmitTimes': [1499104544.0], 'JobIds': ['9737602.0'], 'EndTimes': [1499105294.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [503768], 'TotalUserCpuTimeHistory': [123], 'SiteHistory': ['Unknown', 'T2_US_Wisconsin'], 'TotalSysCpuTimeHistory': [19]}, '12': {'Retries': 0, 'WallDurations': [8.0, 414.0], 'StartTimes': [1499104685.0], 'SubmitTimes': [1499104543.0], 'JobIds': ['9737593.0'], 'EndTimes': [1499105099.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [580896], 'TotalUserCpuTimeHistory': [110], 'SiteHistory': ['Unknown', 'T2_US_UCSD'], 'TotalSysCpuTimeHistory': [16]}, '15': {'Retries': 0, 'WallDurations': [9.0, 2096.0], 'StartTimes': [1499104681.0], 'SubmitTimes': [1499104544.0], 'JobIds': ['9737599.0'], 'EndTimes': [1499106777.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [620892], 'TotalUserCpuTimeHistory': [143], 'SiteHistory': ['Unknown', 'T2_US_Florida'], 'TotalSysCpuTimeHistory': [34]}, '14': {'Retries': 0, 'WallDurations': [9.0, 255.0], 'StartTimes': [1499104680.0], 'SubmitTimes': [1499104544.0], 'JobIds': ['9737600.0'], 'EndTimes': [1499104935.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [2644], 'TotalUserCpuTimeHistory': [64], 'SiteHistory': ['Unknown', 'T2_US_Purdue'], 'TotalSysCpuTimeHistory': [3]}, '17': {'Retries': 0, 'WallDurations': [9.0, 504.0], 'StartTimes': [1499104685.0], 'SubmitTimes': [1499104544.0], 'JobIds': ['9737597.0'], 'EndTimes': [1499105189.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [570552], 'TotalUserCpuTimeHistory': [101], 'SiteHistory': ['Unknown', 'T2_US_UCSD'], 'TotalSysCpuTimeHistory': [14]}, '16': {'Retries': 0, 'WallDurations': [9.0, 2113.0], 'StartTimes': [1499104682.0], 'SubmitTimes': [1499104544.0], 'JobIds': ['9737601.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [608092], 'TotalUserCpuTimeHistory': [96.0], 'SiteHistory': ['Unknown', 'T2_US_Florida'], 'TotalSysCpuTimeHistory': [12.0]}, '18': {'Retries': 0, 'WallDurations': [220.0, 223.0], 'StartTimes': [1499104681.0], 'SubmitTimes': [1499104544.0], 'JobIds': ['9737598.0'], 'EndTimes': [1499104904.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [25712], 'TotalUserCpuTimeHistory': [102], 'SiteHistory': ['Unknown', 'T2_US_Florida'], 'TotalSysCpuTimeHistory': [13]}, '1': {'Retries': 0, 'WallDurations': [9.0, 384.0], 'StartTimes': [1499104682.0], 'SubmitTimes': [1499104543.0], 'JobIds': ['9737591.0'], 'EndTimes': [1499105066.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [593876], 'TotalUserCpuTimeHistory': [102], 'SiteHistory': ['Unknown', 'T2_US_MIT'], 'TotalSysCpuTimeHistory': [7]}, '3': {'Retries': 0, 'WallDurations': [9.0, 261.0], 'StartTimes': [1499104681.0], 'SubmitTimes': [1499104541.0], 'JobIds': ['9737586.0'], 'EndTimes': [1499104942.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [16712], 'TotalUserCpuTimeHistory': [65], 'SiteHistory': ['Unknown', 'T2_US_Purdue'], 'TotalSysCpuTimeHistory': [4]}, '2': {'Retries': 0, 'WallDurations': [9.0, 3189.0], 'StartTimes': [1499104682.0], 'SubmitTimes': [1499104542.0], 'JobIds': ['9737588.0'], 'EndTimes': [1499107871.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [624376], 'TotalUserCpuTimeHistory': [144], 'SiteHistory': ['Unknown', 'T2_US_Florida'], 'TotalSysCpuTimeHistory': [25]}, '5': {'Retries': 0, 'WallDurations': [9.0, 386.0], 'StartTimes': [1499104682.0], 'SubmitTimes': [1499104543.0], 'JobIds': ['9737595.0'], 'EndTimes': [1499105068.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [585488], 'TotalUserCpuTimeHistory': [108], 'SiteHistory': ['Unknown', 'T2_US_MIT'], 'TotalSysCpuTimeHistory': [33]}, '4': {'Retries': 0, 'WallDurations': [9.0, 640.0], 'StartTimes': [1499104682.0], 'SubmitTimes': [1499104542.0], 'JobIds': ['9737589.0'], 'EndTimes': [1499105322.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [581432], 'TotalUserCpuTimeHistory': [149], 'SiteHistory': ['Unknown', 'T2_US_Wisconsin'], 'TotalSysCpuTimeHistory': [27]}, '7': {'Retries': 0, 'WallDurations': [10.0, 343.0], 'StartTimes': [1499104681.0], 'SubmitTimes': [1499104542.0], 'JobIds': ['9737587.0'], 'EndTimes': [1499105024.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [562976], 'TotalUserCpuTimeHistory': [88], 'SiteHistory': ['Unknown', 'T2_US_MIT'], 'TotalSysCpuTimeHistory': [13]}, '6': {'Retries': 0, 'WallDurations': [8.0, 594.0], 'StartTimes': [1499104682.0], 'SubmitTimes': [1499104541.0], 'JobIds': ['9737585.0'], 'EndTimes': [1499105276.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [502684], 'TotalUserCpuTimeHistory': [113], 'SiteHistory': ['Unknown', 'T2_US_Wisconsin'], 'TotalSysCpuTimeHistory': [21]}, '9': {'Retries': 0, 'WallDurations': [10.0, 612.0], 'StartTimes': [1499104681.0], 'SubmitTimes': [1499104544.0], 'JobIds': ['9737596.0'], 'EndTimes': [1499105293.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [492180], 'TotalUserCpuTimeHistory': [110], 'SiteHistory': ['Unknown', 'T2_US_Wisconsin'], 'TotalSysCpuTimeHistory': [26]}, '8': {'Retries': 0, 'WallDurations': [9.0, 362.0], 'StartTimes': [1499104682.0], 'SubmitTimes': [1499104543.0], 'JobIds': ['9737592.0'], 'EndTimes': [1499105044.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [579240], 'TotalUserCpuTimeHistory': [117], 'SiteHistory': ['Unknown', 'T2_US_MIT'], 'TotalSysCpuTimeHistory': [13]}}
+INFO 2017-07-03 21:02:47,536: 	 Status on the scheduler:	SUBMITTED
+INFO 2017-07-03 21:02:47,537: 	 
+Jobs status:                    finished       83.3% (15/18)
+INFO 2017-07-03 21:02:47,537: 	 				running         5.6% ( 1/18)
+INFO 2017-07-03 21:02:47,537: 	 				transferring   11.1% ( 2/18)
+INFO 2017-07-03 21:02:47,885: 	 
+Publication status:		acquired        5.6% ( 1/18)
+				done           83.3% (15/18)
+				new             5.6% ( 1/18)
+				unsubmitted     5.6% ( 1/18)
+INFO 2017-07-03 21:02:47,885: 	 
+Output dataset:			/GenericTTbar/ciperez-CRAB3_tutorial_May2015_MC_analysis-37773c17ce2994cf16892d5f04945e41/USER
+Output dataset DAS URL:		https://cmsweb.cern.ch/das/request?input=%2FGenericTTbar%2Fciperez-CRAB3_tutorial_May2015_MC_analysis-37773c17ce2994cf16892d5f04945e41%2FUSER&instance=prod%2Fphys03
+INFO 2017-07-03 21:02:47,911: 	 Log file is /afs/cern.ch/user/c/ciperez/OWNAnalyzer/CMSSW_8_0_13_patch1/src/triphoton/CRAB3-tutorial/crab_projects/crab_tutorial_July2017_MC_analysis/crab.log
+DEBUG 2017-07-03 21:17:11,886: 	 Executing command: 'status'
+DEBUG 2017-07-03 21:17:11,886: 	 Found CRAB cache file /afs/cern.ch/user/c/ciperez/.crab3
+DEBUG 2017-07-03 21:17:11,892: 	 Checking credentials
+DEBUG 2017-07-03 21:17:11,893: 	 Found proxy file /tmp/x509up_u81686
+DEBUG 2017-07-03 21:17:11,893: 	 Getting proxy life time left
+DEBUG 2017-07-03 21:17:12,501: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u81686 -timeleft
+ output : 598118
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 21:17:13,106: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u81686 -actimeleft
+ output : 598116
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 21:17:13,107: 	 Proxy valid for 166:08:38 hours
+DEBUG 2017-07-03 21:17:13,222: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ciperez/CN=773459/CN=Cilicia Uzziel Perez
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 21:17:13,222: 	 Checking credentials
+DEBUG 2017-07-03 21:17:13,223: 	 Found proxy file /tmp/x509up_u81686
+DEBUG 2017-07-03 21:17:13,223: 	 Getting proxy life time left
+DEBUG 2017-07-03 21:17:13,729: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u81686 -timeleft
+ output : 598117
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 21:17:14,232: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u81686 -actimeleft
+ output : 598115
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 21:17:14,233: 	 Proxy valid for 166:08:37 hours
+DEBUG 2017-07-03 21:17:14,599: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108|0105|0109).cern.ch
+DEBUG 2017-07-03 21:17:14,706: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ciperez/CN=773459/CN=Cilicia Uzziel Perez
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 21:17:14,706: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2017-07-03 21:17:14,706: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ciperez/CN=773459/CN=Cilicia Uzziel Perez_cmsweb.cern.ch for credential name
+DEBUG 2017-07-03 21:17:15,010: 	 Executing : 
+ command : myproxy-info -l 87563fafcc81b81d7383d27ab3acabdf21124584 -s myproxy.cern.ch
+ output : username: 87563fafcc81b81d7383d27ab3acabdf21124584
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ciperez/CN=773459/CN=Cilicia Uzziel Perez
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108|0105|0109).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108|0105|0109).cern.ch
+  timeleft: 718:26:06  (29.9 days)
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 21:17:15,011: 	 Myproxy is valid: 2586366
+DEBUG 2017-07-03 21:17:15,011: 	 Command use: status
+DEBUG 2017-07-03 21:17:15,011: 	 Options use: ['-d', 'crab_projects/crab_tutorial_July2017_MC_analysis']
+DEBUG 2017-07-03 21:17:15,347: 	 CRABClient version: 3.3.1706
+DEBUG 2017-07-03 21:17:15,347: 	 Instance is prod
+DEBUG 2017-07-03 21:17:15,347: 	 Server base url is cmsweb.cern.ch
+DEBUG 2017-07-03 21:17:15,347: 	 Command url /crabserver/prod/workflow
+DEBUG 2017-07-03 21:17:15,670: 	 Got information from server oracle database: {u'result': [u'170703_175420:ciperez_crab_tutorial_July2017_MC_analysis', u'None', u'SUBMITTED', u'2017-07-03 17:54:20.863784', u'None', u'2017-07-03 17:55:45.016879', u'None', u'CMSSW_8_0_13_patch1', u'slc6_amd64_gcc530', u'/GenericTTbar/HC-CMSSW_5_3_1_START53_V5-v1/GEN-SIM-RECO', u'[]', u'[]', u'FileBased', u"{'splitOnRun': False, 'halt_job_on_file_boundaries': False, 'files_per_job': 10, 'runs': [], 'lumis': []}", u'0', u'17b0128e57a4b452491730f11a4a4cc39b0ecaac58912ef9398875acfe5d339a.tar.gz', u'https://cmsweb.cern.ch/crabcache', u'ciperez', u'/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ciperez/CN=773459/CN=Cilicia Uzziel Perez', u'cms', u'None', u'None', u'CRAB3_tutorial_May2015_MC_analysis-00000000000000000000000000000000', u'T2_US_Nebraska', u'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', u'T', u'Analysis', u'{}', u'[]', u'T', u'vocms052', u'[]', u'1250', u'1', u'2000', u'10', u"['/GenericTTbar/ciperez-CRAB3_tutorial_May2015_MC_analysis-37773c17ce2994cf16892d5f04945e41/USER']", u'http://vocms0137.cern.ch/mon/cms535/170703_175420:ciperez_crab_tutorial_July2017_MC_analysis', u'None', u'None', u'[]', u'[]', u'[]', u'pythia', u'[]', u'[]', u"['output.root']", u'https://cmsweb.cern.ch/crabserver/prod', u'None', u'0', u'cmsgwms-collector-global.cern.ch:9620,cmssrv221.fnal.gov:9620', u'crab3@vocms0137.cern.ch', u'F', u'[]', u'T', u'/store/user/ciperez/', u'F', u'None', u'F', u'F', u'F', u'None', u'GenericTTbar', u'filetransfers', u'SUBMIT', u'9737582', u'9026ddb8a4f665adace538b9fadce4bf81f6a87167fb13dad887f703b174e8cb.tar.gz', u'188.184.95.2', u'F', u'2017-07-03 19:15:31.355527'], u'desc': {u'columns': [u'tm_taskname', u'panda_jobset_id', u'tm_task_status', u'tm_start_time', u'tm_start_injection', u'tm_end_injection', u'tm_task_failure', u'tm_job_sw', u'tm_job_arch', u'tm_input_dataset', u'tm_site_whitelist', u'tm_site_blacklist', u'tm_split_algo', u'tm_split_args', u'tm_totalunits', u'tm_user_sandbox', u'tm_cache_url', u'tm_username', u'tm_user_dn', u'tm_user_vo', u'tm_user_role', u'tm_user_group', u'tm_publish_name', u'tm_asyncdest', u'tm_dbs_url', u'tm_publish_dbs_url', u'tm_publication', u'tm_job_type', u'tm_arguments', u'panda_resubmitted_jobs', u'tm_save_logs', u'tw_name', u'tm_user_infiles', u'tm_maxjobruntime', u'tm_numcores', u'tm_maxmemory', u'tm_priority', u'tm_output_dataset', u'tm_user_webdir', u'tm_activity', u'tm_scriptexe', u'tm_scriptargs', u'tm_extrajdl', u'tm_task_warnings', u'tm_generator', u'tm_outfiles', u'tm_tfile_outfiles', u'tm_edm_outfiles', u'tm_asourl', u'tm_events_per_lumi', u'tm_use_parent', u'tm_collector', u'tm_schedd', u'tm_dry_run', u'tm_user_files', u'tm_transfer_outputs', u'tm_output_lfn', u'tm_ignore_locality', u'tm_fail_limit', u'tm_one_event_mode', u'tm_publish_groupname', u'tm_nonvalid_input_dataset', u'tm_secondary_input_dataset', u'tm_primary_dataset', u'tm_asodb', u'tm_task_command', u'clusterid', u'tm_debug_files', u'tm_submitter_ip_addr', u'tm_ignore_global_blacklist', u'tm_last_publication']}}
+INFO 2017-07-03 21:17:15,670: 	 CRAB project directory:		/afs/cern.ch/user/c/ciperez/OWNAnalyzer/CMSSW_8_0_13_patch1/src/triphoton/CRAB3-tutorial/crab_projects/crab_tutorial_July2017_MC_analysis
+INFO 2017-07-03 21:17:15,670: 	 Task name:			170703_175420:ciperez_crab_tutorial_July2017_MC_analysis
+INFO 2017-07-03 21:17:15,670: 	 Grid scheduler:			crab3@vocms0137.cern.ch
+INFO 2017-07-03 21:17:15,670: 	 Status on the CRAB server:	SUBMITTED
+INFO 2017-07-03 21:17:15,671: 	 Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/170703_175420%3Aciperez_crab_tutorial_July2017_MC_analysis
+INFO 2017-07-03 21:17:15,671: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=ciperez&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=170703_175420%3Aciperez_crab_tutorial_July2017_MC_analysis
+DEBUG 2017-07-03 21:17:15,671: 	 The CRAB server submitted your task to the Grid scheduler (cluster ID: 9737582)
+DEBUG 2017-07-03 21:17:15,671: 	 Webdir is located at http://vocms0137.cern.ch/mon/cms535/170703_175420:ciperez_crab_tutorial_July2017_MC_analysis
+DEBUG 2017-07-03 21:17:15,995: 	 Proxied webdir is located at https://cmsweb.cern.ch/scheddmon/0137/cms535/170703_175420:ciperez_crab_tutorial_July2017_MC_analysis
+DEBUG 2017-07-03 21:17:15,995: 	 Retrieving 'status_cache' file from https://cmsweb.cern.ch/scheddmon/0137/cms535/170703_175420:ciperez_crab_tutorial_July2017_MC_analysis/status_cache
+DEBUG 2017-07-03 21:17:16,350: 	 Got information from status cache file: {'11': {'Retries': 0, 'WallDurations': [10.0, 635.0], 'StartTimes': [1499104681.0], 'SubmitTimes': [1499104542.0], 'JobIds': ['9737590.0'], 'EndTimes': [1499105316.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [499060], 'TotalUserCpuTimeHistory': [118], 'SiteHistory': ['Unknown', 'T2_US_Wisconsin'], 'TotalSysCpuTimeHistory': [17]}, '10': {'Retries': 0, 'WallDurations': [9.0, 363.0], 'StartTimes': [1499104681.0], 'SubmitTimes': [1499104543.0], 'JobIds': ['9737594.0'], 'EndTimes': [1499105044.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [595864], 'TotalUserCpuTimeHistory': [102], 'SiteHistory': ['Unknown', 'T2_US_MIT'], 'TotalSysCpuTimeHistory': [12]}, '13': {'Retries': 0, 'WallDurations': [8.0, 613.0], 'StartTimes': [1499104681.0], 'SubmitTimes': [1499104544.0], 'JobIds': ['9737602.0'], 'EndTimes': [1499105294.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [503768], 'TotalUserCpuTimeHistory': [123], 'SiteHistory': ['Unknown', 'T2_US_Wisconsin'], 'TotalSysCpuTimeHistory': [19]}, '12': {'Retries': 0, 'WallDurations': [8.0, 414.0], 'StartTimes': [1499104685.0], 'SubmitTimes': [1499104543.0], 'JobIds': ['9737593.0'], 'EndTimes': [1499105099.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [580896], 'TotalUserCpuTimeHistory': [110], 'SiteHistory': ['Unknown', 'T2_US_UCSD'], 'TotalSysCpuTimeHistory': [16]}, '15': {'Retries': 0, 'WallDurations': [9.0, 2096.0], 'StartTimes': [1499104681.0], 'SubmitTimes': [1499104544.0], 'JobIds': ['9737599.0'], 'EndTimes': [1499106777.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [620892], 'TotalUserCpuTimeHistory': [143], 'SiteHistory': ['Unknown', 'T2_US_Florida'], 'TotalSysCpuTimeHistory': [34]}, '14': {'Retries': 0, 'WallDurations': [9.0, 255.0], 'StartTimes': [1499104680.0], 'SubmitTimes': [1499104544.0], 'JobIds': ['9737600.0'], 'EndTimes': [1499104935.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [2644], 'TotalUserCpuTimeHistory': [64], 'SiteHistory': ['Unknown', 'T2_US_Purdue'], 'TotalSysCpuTimeHistory': [3]}, '17': {'Retries': 0, 'WallDurations': [9.0, 504.0], 'StartTimes': [1499104685.0], 'SubmitTimes': [1499104544.0], 'JobIds': ['9737597.0'], 'EndTimes': [1499105189.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [570552], 'TotalUserCpuTimeHistory': [101], 'SiteHistory': ['Unknown', 'T2_US_UCSD'], 'TotalSysCpuTimeHistory': [14]}, '16': {'Retries': 0, 'WallDurations': [9.0, 4218.0], 'StartTimes': [1499104682.0], 'SubmitTimes': [1499104544.0], 'JobIds': ['9737601.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [609156], 'TotalUserCpuTimeHistory': [124.0], 'SiteHistory': ['Unknown', 'T2_US_Florida'], 'TotalSysCpuTimeHistory': [15.0]}, '18': {'Retries': 0, 'WallDurations': [220.0, 223.0], 'StartTimes': [1499104681.0], 'SubmitTimes': [1499104544.0], 'JobIds': ['9737598.0'], 'EndTimes': [1499104904.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [25712], 'TotalUserCpuTimeHistory': [102], 'SiteHistory': ['Unknown', 'T2_US_Florida'], 'TotalSysCpuTimeHistory': [13]}, '1': {'Retries': 0, 'WallDurations': [9.0, 384.0], 'StartTimes': [1499104682.0], 'SubmitTimes': [1499104543.0], 'JobIds': ['9737591.0'], 'EndTimes': [1499105066.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [593876], 'TotalUserCpuTimeHistory': [102], 'SiteHistory': ['Unknown', 'T2_US_MIT'], 'TotalSysCpuTimeHistory': [7]}, '3': {'Retries': 0, 'WallDurations': [9.0, 261.0], 'StartTimes': [1499104681.0], 'SubmitTimes': [1499104541.0], 'JobIds': ['9737586.0'], 'EndTimes': [1499104942.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [16712], 'TotalUserCpuTimeHistory': [65], 'SiteHistory': ['Unknown', 'T2_US_Purdue'], 'TotalSysCpuTimeHistory': [4]}, '2': {'Retries': 0, 'WallDurations': [9.0, 3189.0], 'StartTimes': [1499104682.0], 'SubmitTimes': [1499104542.0], 'JobIds': ['9737588.0'], 'EndTimes': [1499107871.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [624376], 'TotalUserCpuTimeHistory': [144], 'SiteHistory': ['Unknown', 'T2_US_Florida'], 'TotalSysCpuTimeHistory': [25]}, '5': {'Retries': 0, 'WallDurations': [9.0, 386.0], 'StartTimes': [1499104682.0], 'SubmitTimes': [1499104543.0], 'JobIds': ['9737595.0'], 'EndTimes': [1499105068.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [585488], 'TotalUserCpuTimeHistory': [108], 'SiteHistory': ['Unknown', 'T2_US_MIT'], 'TotalSysCpuTimeHistory': [33]}, '4': {'Retries': 0, 'WallDurations': [9.0, 640.0], 'StartTimes': [1499104682.0], 'SubmitTimes': [1499104542.0], 'JobIds': ['9737589.0'], 'EndTimes': [1499105322.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [581432], 'TotalUserCpuTimeHistory': [149], 'SiteHistory': ['Unknown', 'T2_US_Wisconsin'], 'TotalSysCpuTimeHistory': [27]}, '7': {'Retries': 0, 'WallDurations': [10.0, 343.0], 'StartTimes': [1499104681.0], 'SubmitTimes': [1499104542.0], 'JobIds': ['9737587.0'], 'EndTimes': [1499105024.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [562976], 'TotalUserCpuTimeHistory': [88], 'SiteHistory': ['Unknown', 'T2_US_MIT'], 'TotalSysCpuTimeHistory': [13]}, '6': {'Retries': 0, 'WallDurations': [8.0, 594.0], 'StartTimes': [1499104682.0], 'SubmitTimes': [1499104541.0], 'JobIds': ['9737585.0'], 'EndTimes': [1499105276.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [502684], 'TotalUserCpuTimeHistory': [113], 'SiteHistory': ['Unknown', 'T2_US_Wisconsin'], 'TotalSysCpuTimeHistory': [21]}, '9': {'Retries': 0, 'WallDurations': [10.0, 612.0], 'StartTimes': [1499104681.0], 'SubmitTimes': [1499104544.0], 'JobIds': ['9737596.0'], 'EndTimes': [1499105293.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [492180], 'TotalUserCpuTimeHistory': [110], 'SiteHistory': ['Unknown', 'T2_US_Wisconsin'], 'TotalSysCpuTimeHistory': [26]}, '8': {'Retries': 0, 'WallDurations': [9.0, 362.0], 'StartTimes': [1499104682.0], 'SubmitTimes': [1499104543.0], 'JobIds': ['9737592.0'], 'EndTimes': [1499105044.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [579240], 'TotalUserCpuTimeHistory': [117], 'SiteHistory': ['Unknown', 'T2_US_MIT'], 'TotalSysCpuTimeHistory': [13]}}
+INFO 2017-07-03 21:17:16,350: 	 Status on the scheduler:	SUBMITTED
+INFO 2017-07-03 21:17:16,350: 	 
+Jobs status:                    finished       88.9% (16/18)
+INFO 2017-07-03 21:17:16,350: 	 				running         5.6% ( 1/18)
+INFO 2017-07-03 21:17:16,350: 	 				transferring    5.6% ( 1/18)
+INFO 2017-07-03 21:17:16,737: 	 
+Publication status:		acquired        5.6% ( 1/18)
+				done           88.9% (16/18)
+				unsubmitted     5.6% ( 1/18)
+INFO 2017-07-03 21:17:16,737: 	 
+Output dataset:			/GenericTTbar/ciperez-CRAB3_tutorial_May2015_MC_analysis-37773c17ce2994cf16892d5f04945e41/USER
+Output dataset DAS URL:		https://cmsweb.cern.ch/das/request?input=%2FGenericTTbar%2Fciperez-CRAB3_tutorial_May2015_MC_analysis-37773c17ce2994cf16892d5f04945e41%2FUSER&instance=prod%2Fphys03
+INFO 2017-07-03 21:17:16,776: 	 Log file is /afs/cern.ch/user/c/ciperez/OWNAnalyzer/CMSSW_8_0_13_patch1/src/triphoton/CRAB3-tutorial/crab_projects/crab_tutorial_July2017_MC_analysis/crab.log

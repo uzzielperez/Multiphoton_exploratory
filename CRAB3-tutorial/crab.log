@@ -1,0 +1,385 @@
+DEBUG 2017-07-03 19:36:14,521: 	 Executing command: 'submit'
+DEBUG 2017-07-03 19:36:14,522: 	 Found CRAB cache file /afs/cern.ch/user/c/ciperez/.crab3
+DEBUG 2017-07-03 19:36:14,594: 	 Checking credentials
+DEBUG 2017-07-03 19:36:14,595: 	 Found proxy file /tmp/x509up_u81686
+DEBUG 2017-07-03 19:36:14,595: 	 Getting proxy life time left
+DEBUG 2017-07-03 19:36:15,408: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u81686 -timeleft
+ output : 604175
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 19:36:16,029: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u81686 -actimeleft
+ output : 604174
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 19:36:16,029: 	 Proxy valid for 167:49:35 hours
+ERROR 2017-07-03 19:36:16,030: 	 CRAB configuration file crabConfig.py not found.
+ERROR 2017-07-03 19:36:16,030: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1706/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1706/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1706/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1706/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 298, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1706/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 46, in loadConfig
+    raise ConfigurationException("CRAB configuration file %s not found." % (configname))
+ConfigurationException: CRAB configuration file crabConfig.py not found.
+DEBUG 2017-07-03 19:44:20,681: 	 Executing command: 'submit'
+DEBUG 2017-07-03 19:44:20,681: 	 Found CRAB cache file /afs/cern.ch/user/c/ciperez/.crab3
+DEBUG 2017-07-03 19:44:20,707: 	 Checking credentials
+DEBUG 2017-07-03 19:44:20,707: 	 Found proxy file /tmp/x509up_u81686
+DEBUG 2017-07-03 19:44:20,707: 	 Getting proxy life time left
+DEBUG 2017-07-03 19:44:22,876: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u81686 -timeleft
+ output : 603688
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 19:44:24,207: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u81686 -actimeleft
+ output : 603685
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 19:44:24,207: 	 Proxy valid for 167:41:28 hours
+INFO 2017-07-03 19:44:24,207: 	 Will use CRAB configuration file crabConfig_tutorial_MC_analysis.py
+DEBUG 2017-07-03 19:44:24,207: 	 Loading CRAB configuration file.
+DEBUG 2017-07-03 19:44:29,593: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2017-07-03 19:44:29,594: 	 Working area '/afs/cern.ch/user/c/ciperez/OWNAnalyzer/CMSSW_8_0_13_patch1/src/triphoton/CRAB3-tutorial/crab_projects/crab_tutorial_May2015_MC_analysis' already exists 
+Please change the requestName in the config file
+ERROR 2017-07-03 19:44:29,594: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1706/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1706/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1706/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1706/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 302, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1706/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 394, in createWorkArea
+    raise ConfigException("Working area '%s' already exists \nPlease change the requestName in the config file" % fullpath)
+ConfigException: Working area '/afs/cern.ch/user/c/ciperez/OWNAnalyzer/CMSSW_8_0_13_patch1/src/triphoton/CRAB3-tutorial/crab_projects/crab_tutorial_May2015_MC_analysis' already exists 
+Please change the requestName in the config file
+DEBUG 2017-07-03 19:47:08,440: 	 Executing command: 'checkwrite'
+DEBUG 2017-07-03 19:47:08,440: 	 Found CRAB cache file /afs/cern.ch/user/c/ciperez/.crab3
+DEBUG 2017-07-03 19:47:08,480: 	 Checking credentials
+DEBUG 2017-07-03 19:47:08,481: 	 Found proxy file /tmp/x509up_u81686
+DEBUG 2017-07-03 19:47:08,481: 	 Getting proxy life time left
+DEBUG 2017-07-03 19:47:10,028: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u81686 -timeleft
+ output : 603521
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 19:47:11,148: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u81686 -actimeleft
+ output : 603518
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 19:47:11,149: 	 Proxy valid for 167:38:41 hours
+DEBUG 2017-07-03 19:47:11,372: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ciperez/CN=773459/CN=Cilicia Uzziel Perez
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 19:47:11,373: 	 Checking credentials
+DEBUG 2017-07-03 19:47:11,373: 	 Found proxy file /tmp/x509up_u81686
+DEBUG 2017-07-03 19:47:11,373: 	 Getting proxy life time left
+DEBUG 2017-07-03 19:47:12,290: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u81686 -timeleft
+ output : 603518
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 19:47:13,419: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u81686 -actimeleft
+ output : 603516
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 19:47:13,419: 	 Proxy valid for 167:38:38 hours
+DEBUG 2017-07-03 19:47:14,442: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u81686 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 19:47:14,443: 	 Command use: checkwrite
+DEBUG 2017-07-03 19:47:14,443: 	 Options use: ['--site=T2_US_Nebraska']
+DEBUG 2017-07-03 19:47:14,443: 	 Instance is None
+DEBUG 2017-07-03 19:47:14,443: 	 Server base url is None
+DEBUG 2017-07-03 19:47:14,446: 	 Service initialised ({'endpoint': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'key': '/tmp/x509up_u81686', 'maxcachereuse': 24.0, 'cachepath': '/tmp/ciperez/.wmcore_cache_vi25aS/cmsweb.cern.ch', 'inputdata': {}, 'cert': '/tmp/x509up_u81686', 'timeout': 300, 'service_name': 'PhEDEx', 'requests': {'content_type': 'application/x-www-form-urlencoded', 'cacheduration': 0, 'host': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'accept_type': 'text/html', 'key': '/tmp/x509up_u81686', 'deleteCacheOnExit': <WMCore.Services.Requests.TempDirectory object at 0x7f6c03e7b450>, 'endpoint_components': ParseResult(scheme='https', netloc='cmsweb.cern.ch', path='/phedex/datasvc/json/prod/', params='', query='', fragment=''), 'endpoint': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'pycurl': True, 'cachepath': '/tmp/ciperez/.wmcore_cache_vi25aS/cmsweb.cern.ch', 'cert': '/tmp/x509up_u81686', 'timeout': 300, 'req_cache_path': '/tmp/ciperez/.wmcore_cache_vi25aS/cmsweb.cern.ch/.cache', 'logger': <logging.Logger object at 0x7f6c03ee3850>}, 'logger': <logging.Logger object at 0x7f6c03ee3850>, 'cacheduration': 0, 'method': None, 'pycurl': True}):
+	 host: cmsweb.cern.ch, basepath: https://cmsweb.cern.ch/phedex/datasvc/json/prod/ (text/html)
+	 cache: /tmp/ciperez/.wmcore_cache_vi25aS/cmsweb.cern.ch (duration 0 hours, max reuse 24.0 hours)
+INFO 2017-07-03 19:47:14,446: 	 Will check write permission in the default location /store/user/<username>
+INFO 2017-07-03 19:47:14,446: 	 Retrieving DN from proxy...
+INFO 2017-07-03 19:47:17,702: 	 DN is: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ciperez/CN=773459/CN=Cilicia Uzziel Perez
+INFO 2017-07-03 19:47:17,702: 	 Retrieving username from SiteDB...
+INFO 2017-07-03 19:47:22,514: 	 Username is: ciperez
+INFO 2017-07-03 19:47:22,515: 	 Validating LFN /store/user/ciperez...
+INFO 2017-07-03 19:47:22,515: 	 LFN /store/user/ciperez is valid.
+INFO 2017-07-03 19:47:22,567: 	 Will use `gfal-copy`, `gfal-rm` commands for checking write permissions
+INFO 2017-07-03 19:47:22,568: 	 Will check write permission in /store/user/ciperez on site T2_US_Nebraska
+DEBUG 2017-07-03 19:47:22,573: 	 getData: 
+	url: lfn2pfn
+	data: {'node': ['T2_US_Nebraska'], 'custodial': 'n', 'lfn': ['/store/user/ciperez/crab3checkwrite_20170703_194722/crab3checkwrite_20170703_194722.tmp'], 'protocol': 'srmv2'}
+INFO 2017-07-03 19:47:23,017: 	 
+Attempting to create (dummy) directory crab3checkwrite_20170703_194722 and copy (dummy) file crab3checkwrite_20170703_194722.tmp to /store/user/ciperez
+
+INFO 2017-07-03 19:47:23,023: 	 Executing command: env -i X509_USER_PROXY=/tmp/x509up_u81686 gfal-copy -p -v -t 180 file:///afs/cern.ch/user/c/ciperez/OWNAnalyzer/CMSSW_8_0_13_patch1/src/triphoton/CRAB3-tutorial/crab3checkwrite_20170703_194722.tmp 'gsiftp://red-gridftp.unl.edu//mnt/hadoop/user/uscms01/pnfs/unl.edu/data4/cms/store/user/ciperez/crab3checkwrite_20170703_194722/crab3checkwrite_20170703_194722.tmp'
+INFO 2017-07-03 19:47:23,024: 	 Please wait...
+INFO 2017-07-03 19:47:31,829: 	 
+Successfully created directory crab3checkwrite_20170703_194722 and copied file crab3checkwrite_20170703_194722.tmp to /store/user/ciperez
+INFO 2017-07-03 19:47:31,830: 	 
+Attempting to delete file gsiftp://red-gridftp.unl.edu//mnt/hadoop/user/uscms01/pnfs/unl.edu/data4/cms/store/user/ciperez/crab3checkwrite_20170703_194722/crab3checkwrite_20170703_194722.tmp
+
+INFO 2017-07-03 19:47:31,830: 	 Executing command: env -i X509_USER_PROXY=/tmp/x509up_u81686 gfal-rm -v -t 180 'gsiftp://red-gridftp.unl.edu//mnt/hadoop/user/uscms01/pnfs/unl.edu/data4/cms/store/user/ciperez/crab3checkwrite_20170703_194722/crab3checkwrite_20170703_194722.tmp'
+INFO 2017-07-03 19:47:31,830: 	 Please wait...
+INFO 2017-07-03 19:47:35,844: 	 
+Successfully deleted file gsiftp://red-gridftp.unl.edu//mnt/hadoop/user/uscms01/pnfs/unl.edu/data4/cms/store/user/ciperez/crab3checkwrite_20170703_194722/crab3checkwrite_20170703_194722.tmp
+INFO 2017-07-03 19:47:35,844: 	 
+Attempting to delete directory gsiftp://red-gridftp.unl.edu//mnt/hadoop/user/uscms01/pnfs/unl.edu/data4/cms/store/user/ciperez/crab3checkwrite_20170703_194722/
+
+INFO 2017-07-03 19:47:35,844: 	 Executing command: env -i X509_USER_PROXY=/tmp/x509up_u81686 gfal-rm -r -v -t 180 'gsiftp://red-gridftp.unl.edu//mnt/hadoop/user/uscms01/pnfs/unl.edu/data4/cms/store/user/ciperez/crab3checkwrite_20170703_194722/'
+INFO 2017-07-03 19:47:35,844: 	 Please wait...
+INFO 2017-07-03 19:47:41,062: 	 
+Successfully deleted directory gsiftp://red-gridftp.unl.edu//mnt/hadoop/user/uscms01/pnfs/unl.edu/data4/cms/store/user/ciperez/crab3checkwrite_20170703_194722/
+INFO 2017-07-03 19:47:41,069: 	 
+Checkwrite Result:
+INFO 2017-07-03 19:47:41,069: 	 Success: Able to write in /store/user/ciperez on site T2_US_Nebraska
+DEBUG 2017-07-03 19:49:16,663: 	 Executing command: 'checkwrite'
+DEBUG 2017-07-03 19:49:16,663: 	 Found CRAB cache file /afs/cern.ch/user/c/ciperez/.crab3
+DEBUG 2017-07-03 19:49:16,717: 	 Checking credentials
+DEBUG 2017-07-03 19:49:16,718: 	 Found proxy file /tmp/x509up_u81686
+DEBUG 2017-07-03 19:49:16,718: 	 Getting proxy life time left
+DEBUG 2017-07-03 19:49:17,855: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u81686 -timeleft
+ output : 603393
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 19:49:18,787: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u81686 -actimeleft
+ output : 603391
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 19:49:18,788: 	 Proxy valid for 167:36:33 hours
+DEBUG 2017-07-03 19:49:18,904: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ciperez/CN=773459/CN=Cilicia Uzziel Perez
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 19:49:18,905: 	 Checking credentials
+DEBUG 2017-07-03 19:49:18,905: 	 Found proxy file /tmp/x509up_u81686
+DEBUG 2017-07-03 19:49:18,905: 	 Getting proxy life time left
+DEBUG 2017-07-03 19:49:19,824: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u81686 -timeleft
+ output : 603391
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 19:49:20,850: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u81686 -actimeleft
+ output : 603389
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 19:49:20,851: 	 Proxy valid for 167:36:31 hours
+DEBUG 2017-07-03 19:49:21,871: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u81686 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 19:49:21,872: 	 Command use: checkwrite
+DEBUG 2017-07-03 19:49:21,872: 	 Options use: ['--site=T2_US_Caltech']
+DEBUG 2017-07-03 19:49:21,872: 	 Instance is None
+DEBUG 2017-07-03 19:49:21,872: 	 Server base url is None
+DEBUG 2017-07-03 19:49:21,876: 	 Service initialised ({'endpoint': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'key': '/tmp/x509up_u81686', 'maxcachereuse': 24.0, 'cachepath': '/tmp/ciperez/.wmcore_cache_rwg_s3/cmsweb.cern.ch', 'inputdata': {}, 'cert': '/tmp/x509up_u81686', 'timeout': 300, 'service_name': 'PhEDEx', 'requests': {'content_type': 'application/x-www-form-urlencoded', 'cacheduration': 0, 'host': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'accept_type': 'text/html', 'key': '/tmp/x509up_u81686', 'deleteCacheOnExit': <WMCore.Services.Requests.TempDirectory object at 0x7fd00e6ed450>, 'endpoint_components': ParseResult(scheme='https', netloc='cmsweb.cern.ch', path='/phedex/datasvc/json/prod/', params='', query='', fragment=''), 'endpoint': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'pycurl': True, 'cachepath': '/tmp/ciperez/.wmcore_cache_rwg_s3/cmsweb.cern.ch', 'cert': '/tmp/x509up_u81686', 'timeout': 300, 'req_cache_path': '/tmp/ciperez/.wmcore_cache_rwg_s3/cmsweb.cern.ch/.cache', 'logger': <logging.Logger object at 0x7fd00e755850>}, 'logger': <logging.Logger object at 0x7fd00e755850>, 'cacheduration': 0, 'method': None, 'pycurl': True}):
+	 host: cmsweb.cern.ch, basepath: https://cmsweb.cern.ch/phedex/datasvc/json/prod/ (text/html)
+	 cache: /tmp/ciperez/.wmcore_cache_rwg_s3/cmsweb.cern.ch (duration 0 hours, max reuse 24.0 hours)
+INFO 2017-07-03 19:49:21,876: 	 Will check write permission in the default location /store/user/<username>
+INFO 2017-07-03 19:49:21,877: 	 Retrieving DN from proxy...
+INFO 2017-07-03 19:49:25,267: 	 DN is: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ciperez/CN=773459/CN=Cilicia Uzziel Perez
+INFO 2017-07-03 19:49:25,267: 	 Retrieving username from SiteDB...
+INFO 2017-07-03 19:49:29,927: 	 Username is: ciperez
+INFO 2017-07-03 19:49:29,927: 	 Validating LFN /store/user/ciperez...
+INFO 2017-07-03 19:49:29,927: 	 LFN /store/user/ciperez is valid.
+INFO 2017-07-03 19:49:29,976: 	 Will use `gfal-copy`, `gfal-rm` commands for checking write permissions
+INFO 2017-07-03 19:49:29,977: 	 Will check write permission in /store/user/ciperez on site T2_US_Caltech
+DEBUG 2017-07-03 19:49:29,983: 	 getData: 
+	url: lfn2pfn
+	data: {'node': ['T2_US_Caltech'], 'custodial': 'n', 'lfn': ['/store/user/ciperez/crab3checkwrite_20170703_194929/crab3checkwrite_20170703_194929.tmp'], 'protocol': 'srmv2'}
+INFO 2017-07-03 19:49:30,455: 	 
+Attempting to create (dummy) directory crab3checkwrite_20170703_194929 and copy (dummy) file crab3checkwrite_20170703_194929.tmp to /store/user/ciperez
+
+INFO 2017-07-03 19:49:30,474: 	 Executing command: env -i X509_USER_PROXY=/tmp/x509up_u81686 gfal-copy -p -v -t 180 file:///afs/cern.ch/user/c/ciperez/OWNAnalyzer/CMSSW_8_0_13_patch1/src/triphoton/CRAB3-tutorial/crab3checkwrite_20170703_194929.tmp 'srm://cit-se.ultralight.org:8443/srm/v2/server?SFN=/mnt/hadoop/store/user/ciperez/crab3checkwrite_20170703_194929/crab3checkwrite_20170703_194929.tmp'
+INFO 2017-07-03 19:49:30,474: 	 Please wait...
+INFO 2017-07-03 19:49:33,156: 	 Failed running copy command
+INFO 2017-07-03 19:49:33,156: 	   Stdout:
+    Copying 85 bytes file:///afs/cern.ch/user/c/ciperez/OWNAnalyzer/CMSSW_8_0_13_patch1/src/triphoton/CRAB3-tutorial/crab3checkwrite_20170703_194929.tmp => srm://cit-se.ultralight.org:8443/srm/v2/server?SFN=/mnt/hadoop/store/user/ciperez/crab3checkwrite_20170703_194929/crab3checkwrite_20170703_194929.tmp
+    event: [1499104172351] BOTH   GFAL2:CORE:COPY	LIST:ENTER	
+    event: [1499104172351] BOTH   GFAL2:CORE:COPY	LIST:ITEM	file:///afs/cern.ch/user/c/ciperez/OWNAnalyzer/CMSSW_8_0_13_patch1/src/triphoton/CRAB3-tutorial/crab3checkwrite_20170703_194929.tmp => srm://cit-se.ultralight.org:8443/srm/v2/server?SFN=/mnt/hadoop/store/user/ciperez/crab3checkwrite_20170703_194929/crab3checkwrite_20170703_194929.tmp
+    event: [1499104172351] BOTH   GFAL2:CORE:COPY	LIST:EXIT	
+    event: [1499104172517] BOTH   SRM	PREPARE:ENTER	
+    
+INFO 2017-07-03 19:49:33,156: 	   Stderr:
+    WARNING Transfer failed with: DESTINATION MAKE_PARENT srm-ifce err: Input/output error, err: [SE][Mkdir][SRM_FAILURE] httpg://cit-se.ultralight.org:8443/srm/v2/server: srm://cit-se.ultralight.org/mnt/hadoop/store/user/ciperez/crab3checkwrite_20170703_194929: Error:/bin/mkdir: cannot create directory `/mnt/hadoop/store/user/ciperez': Permission denied
+    Ref-u uscms5381  /bin/mkdir /mnt/hadoop/store/user/ciperez
+    
+    gfal-copy error: 5 (Input/output error) - DESTINATION MAKE_PARENT srm-ifce err: Input/output error, err: [SE][Mkdir][SRM_FAILURE] httpg://cit-se.ultralight.org:8443/srm/v2/server: srm://cit-se.ultralight.org/mnt/hadoop/store/user/ciperez/crab3checkwrite_20170703_194929: Error:/bin/mkdir: cannot create directory `/mnt/hadoop/store/user/ciperez': Permission denied
+    Ref-u uscms5381  /bin/mkdir /mnt/hadoop/store/user/ciperez
+    
+    
+INFO 2017-07-03 19:49:33,278: 	 
+Checkwrite Result:
+INFO 2017-07-03 19:49:33,278: 	 Error: Unable to write in /store/user/ciperez on site T2_US_Caltech
+       You may want to contact the site administrators sending them the 'crab checkwrite' output as printed above.
+INFO 2017-07-03 19:49:33,278: 	 Note: You cannot write to a site if you did not ask permission.
+DEBUG 2017-07-03 19:50:44,277: 	 Executing command: 'checkwrite'
+DEBUG 2017-07-03 19:50:44,278: 	 Found CRAB cache file /afs/cern.ch/user/c/ciperez/.crab3
+DEBUG 2017-07-03 19:50:44,351: 	 Checking credentials
+DEBUG 2017-07-03 19:50:44,352: 	 Found proxy file /tmp/x509up_u81686
+DEBUG 2017-07-03 19:50:44,352: 	 Getting proxy life time left
+DEBUG 2017-07-03 19:50:45,475: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u81686 -timeleft
+ output : 603305
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 19:50:46,397: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u81686 -actimeleft
+ output : 603303
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 19:50:46,397: 	 Proxy valid for 167:35:05 hours
+DEBUG 2017-07-03 19:50:46,620: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ciperez/CN=773459/CN=Cilicia Uzziel Perez
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 19:50:46,620: 	 Checking credentials
+DEBUG 2017-07-03 19:50:46,620: 	 Found proxy file /tmp/x509up_u81686
+DEBUG 2017-07-03 19:50:46,620: 	 Getting proxy life time left
+DEBUG 2017-07-03 19:50:47,647: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u81686 -timeleft
+ output : 603303
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 19:50:48,567: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u81686 -actimeleft
+ output : 603301
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 19:50:48,567: 	 Proxy valid for 167:35:03 hours
+DEBUG 2017-07-03 19:50:49,710: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u81686 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 19:50:49,710: 	 Command use: checkwrite
+DEBUG 2017-07-03 19:50:49,711: 	 Options use: ['--site=T3_US_FNAL']
+DEBUG 2017-07-03 19:50:49,711: 	 Instance is None
+DEBUG 2017-07-03 19:50:49,711: 	 Server base url is None
+DEBUG 2017-07-03 19:50:49,713: 	 Service initialised ({'endpoint': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'key': '/tmp/x509up_u81686', 'maxcachereuse': 24.0, 'cachepath': '/tmp/ciperez/.wmcore_cache_3hMnZc/cmsweb.cern.ch', 'inputdata': {}, 'cert': '/tmp/x509up_u81686', 'timeout': 300, 'service_name': 'PhEDEx', 'requests': {'content_type': 'application/x-www-form-urlencoded', 'cacheduration': 0, 'host': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'accept_type': 'text/html', 'key': '/tmp/x509up_u81686', 'deleteCacheOnExit': <WMCore.Services.Requests.TempDirectory object at 0x7f441d9bc410>, 'endpoint_components': ParseResult(scheme='https', netloc='cmsweb.cern.ch', path='/phedex/datasvc/json/prod/', params='', query='', fragment=''), 'endpoint': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'pycurl': True, 'cachepath': '/tmp/ciperez/.wmcore_cache_3hMnZc/cmsweb.cern.ch', 'cert': '/tmp/x509up_u81686', 'timeout': 300, 'req_cache_path': '/tmp/ciperez/.wmcore_cache_3hMnZc/cmsweb.cern.ch/.cache', 'logger': <logging.Logger object at 0x7f441da23810>}, 'logger': <logging.Logger object at 0x7f441da23810>, 'cacheduration': 0, 'method': None, 'pycurl': True}):
+	 host: cmsweb.cern.ch, basepath: https://cmsweb.cern.ch/phedex/datasvc/json/prod/ (text/html)
+	 cache: /tmp/ciperez/.wmcore_cache_3hMnZc/cmsweb.cern.ch (duration 0 hours, max reuse 24.0 hours)
+INFO 2017-07-03 19:50:49,714: 	 Will check write permission in the default location /store/user/<username>
+INFO 2017-07-03 19:50:49,714: 	 Retrieving DN from proxy...
+INFO 2017-07-03 19:50:52,673: 	 DN is: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ciperez/CN=773459/CN=Cilicia Uzziel Perez
+INFO 2017-07-03 19:50:52,673: 	 Retrieving username from SiteDB...
+INFO 2017-07-03 19:50:57,957: 	 Username is: ciperez
+INFO 2017-07-03 19:50:57,957: 	 Validating LFN /store/user/ciperez...
+INFO 2017-07-03 19:50:57,957: 	 LFN /store/user/ciperez is valid.
+INFO 2017-07-03 19:50:58,022: 	 Will use `gfal-copy`, `gfal-rm` commands for checking write permissions
+INFO 2017-07-03 19:50:58,022: 	 Will check write permission in /store/user/ciperez on site T3_US_FNAL
+DEBUG 2017-07-03 19:50:58,028: 	 getData: 
+	url: lfn2pfn
+	data: {'node': ['T3_US_FNAL'], 'custodial': 'n', 'lfn': ['/store/user/ciperez/crab3checkwrite_20170703_195058/crab3checkwrite_20170703_195058.tmp'], 'protocol': 'srmv2'}
+WARNING 2017-07-03 19:50:58,696: 	 The cachefile /tmp/ciperez/.wmcore_cache_3hMnZc/cmsweb.cern.ch/4599171165017128945_GET_lfn2pfn does not exist and the service at https://cmsweb.cern.ch/phedex/datasvc/json/prod/lfn2pfn is unavailable - it returned 400 because Bad Request
+ with result: no nodes found for ' T3_US_FNAL '.\n
+
+INFO 2017-07-03 19:50:58,696: 	 Error: Failed to contact PhEDEx or wrong PhEDEx node name is used
+INFO 2017-07-03 19:50:58,696: 	 Result: no nodes found for ' T3_US_FNAL '.\n
+Status :400
+URL :https://cmsweb.cern.ch/phedex/datasvc/json/prod/lfn2pfn
+INFO 2017-07-03 19:50:58,696: 	 The server answered with an error.
+DEBUG 2017-07-03 19:50:58,696: 	 ERROR: Bad Request (400):  'no nodes found for ' T3_US_FNAL '.\n'
+DEBUG 2017-07-03 19:50:58,696: 	 Command failed with URI: https://cmsweb.cern.ch/phedex/datasvc/json/prod/lfn2pfn
+DEBUG 2017-07-03 19:50:58,697: 	      Input data: {'node': ['T3_US_FNAL'], 'custodial': 'n', 'lfn': ['/store/user/ciperez/crab3checkwrite_20170703_195058/crab3checkwrite_20170703_195058.tmp'], 'protocol': 'srmv2'}
+DEBUG 2017-07-03 19:50:58,697: 	      Request headers: {'Content-Length': '36', 'Expires': 'Mon, 03 Jul 2017 18:05:58 GMT', 'Server': 'Apache', 'Connection': 'close', 'X-Pad': 'avoid browser bug', 'Cache-control': 'public, must-revalidate, max-age=900', 'Date': 'Mon, 03 Jul 2017 17:50:58 GMT', 'Content-Type': 'text/html; charset=iso-8859-1', 'CMS-Server-Time': 'D=23426 t=1499104258669806'}
+ERROR 2017-07-03 19:50:58,697: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1706/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1706/bin/crab", line 148, in __call__
+    self.cmd()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1706/lib/python2.7/site-packages/CRABClient/Commands/checkwrite.py", line 86, in __call__
+    pfn = self.getPFN()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1706/lib/python2.7/site-packages/CRABClient/Commands/checkwrite.py", line 160, in getPFN
+    pfndict = self.phedex.getPFN(nodes = [self.options.sitename], lfns = [lfnsadd])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1706/lib/python2.7/site-packages/WMCore/Services/PhEDEx/PhEDEx.py", line 387, in getPFN
+    data = self._getResult('lfn2pfn', args=input_dict, verb='GET')
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1706/lib/python2.7/site-packages/WMCore/Services/PhEDEx/PhEDEx.py", line 48, in _getResult
+    f = self.refreshCache(file, callname, args, verb=verb)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1706/lib/python2.7/site-packages/WMCore/Services/Service.py", line 201, in refreshCache
+    self.getData(cachefile, url, inputdata, incoming_headers, encoder, decoder, verb, contentType)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1706/lib/python2.7/site-packages/WMCore/Services/Service.py", line 309, in getData
+    raise he
+HTTPException: url=https://cmsweb.cern.ch/phedex/datasvc/json/prod/lfn2pfn, code=400, reason=Bad Request, headers={'Content-Length': '36', 'Expires': 'Mon, 03 Jul 2017 18:05:58 GMT', 'Server': 'Apache', 'Connection': 'close', 'X-Pad': 'avoid browser bug', 'Cache-control': 'public, must-revalidate, max-age=900', 'Date': 'Mon, 03 Jul 2017 17:50:58 GMT', 'Content-Type': 'text/html; charset=iso-8859-1', 'CMS-Server-Time': 'D=23426 t=1499104258669806'}
+DEBUG 2017-07-03 19:52:23,463: 	 Executing command: 'submit'
+DEBUG 2017-07-03 19:52:23,464: 	 Found CRAB cache file /afs/cern.ch/user/c/ciperez/.crab3
+DEBUG 2017-07-03 19:52:23,539: 	 Checking credentials
+DEBUG 2017-07-03 19:52:23,540: 	 Found proxy file /tmp/x509up_u81686
+DEBUG 2017-07-03 19:52:23,540: 	 Getting proxy life time left
+DEBUG 2017-07-03 19:52:24,872: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u81686 -timeleft
+ output : 603206
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 19:52:25,917: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u81686 -actimeleft
+ output : 603204
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 19:52:25,918: 	 Proxy valid for 167:33:26 hours
+INFO 2017-07-03 19:52:25,918: 	 Will use CRAB configuration file crabConfig_tutorial_MC_analysis.py
+DEBUG 2017-07-03 19:52:25,918: 	 Loading CRAB configuration file.
+DEBUG 2017-07-03 19:52:34,023: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2017-07-03 19:52:34,024: 	 Working area '/afs/cern.ch/user/c/ciperez/OWNAnalyzer/CMSSW_8_0_13_patch1/src/triphoton/CRAB3-tutorial/crab_projects/crab_tutorial_May2015_MC_analysis' already exists 
+Please change the requestName in the config file
+ERROR 2017-07-03 19:52:34,024: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1706/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1706/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1706/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1706/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 302, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1706/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 394, in createWorkArea
+    raise ConfigException("Working area '%s' already exists \nPlease change the requestName in the config file" % fullpath)
+ConfigException: Working area '/afs/cern.ch/user/c/ciperez/OWNAnalyzer/CMSSW_8_0_13_patch1/src/triphoton/CRAB3-tutorial/crab_projects/crab_tutorial_May2015_MC_analysis' already exists 
+Please change the requestName in the config file

@@ -1,0 +1,185 @@
+DEBUG 2017-07-03 19:45:26,284: 	 Executing command: 'submit'
+DEBUG 2017-07-03 19:45:26,284: 	 Found CRAB cache file /afs/cern.ch/user/c/ciperez/.crab3
+DEBUG 2017-07-03 19:45:26,410: 	 Checking credentials
+DEBUG 2017-07-03 19:45:26,410: 	 Found proxy file /tmp/x509up_u81686
+DEBUG 2017-07-03 19:45:26,410: 	 Getting proxy life time left
+DEBUG 2017-07-03 19:45:27,649: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u81686 -timeleft
+ output : 603623
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 19:45:28,576: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u81686 -actimeleft
+ output : 603621
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 19:45:28,576: 	 Proxy valid for 167:40:23 hours
+INFO 2017-07-03 19:45:28,577: 	 Will use CRAB configuration file crabConfig_tutorial_MC_analysis.py
+DEBUG 2017-07-03 19:45:28,577: 	 Loading CRAB configuration file.
+DEBUG 2017-07-03 19:45:33,467: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+DEBUG 2017-07-03 19:45:33,614: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ciperez/CN=773459/CN=Cilicia Uzziel Perez
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 19:45:33,615: 	 Checking credentials
+DEBUG 2017-07-03 19:45:33,615: 	 Found proxy file /tmp/x509up_u81686
+DEBUG 2017-07-03 19:45:33,615: 	 Getting proxy life time left
+DEBUG 2017-07-03 19:45:34,436: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u81686 -timeleft
+ output : 603616
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 19:45:35,354: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u81686 -actimeleft
+ output : 603614
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 19:45:35,355: 	 Proxy valid for 167:40:16 hours
+DEBUG 2017-07-03 19:45:36,380: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u81686 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 19:45:36,789: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108|0105|0109).cern.ch
+DEBUG 2017-07-03 19:45:37,007: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ciperez/CN=773459/CN=Cilicia Uzziel Perez
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 19:45:37,008: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2017-07-03 19:45:37,008: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ciperez/CN=773459/CN=Cilicia Uzziel Perez_cmsweb.cern.ch for credential name
+DEBUG 2017-07-03 19:45:37,517: 	 Executing : 
+ command : myproxy-info -l 87563fafcc81b81d7383d27ab3acabdf21124584 -s myproxy.cern.ch
+ output : username: 87563fafcc81b81d7383d27ab3acabdf21124584
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ciperez/CN=773459/CN=Cilicia Uzziel Perez
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108|0105|0109).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108|0105|0109).cern.ch
+  timeleft: 719:57:43  (30.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2017-07-03 19:45:37,518: 	 Myproxy is valid: 2591863
+DEBUG 2017-07-03 19:45:37,518: 	 Command use: submit
+DEBUG 2017-07-03 19:45:37,518: 	 Options use: ['-c', 'crabConfig_tutorial_MC_analysis.py']
+DEBUG 2017-07-03 19:45:37,875: 	 CRABClient version: 3.3.1706
+DEBUG 2017-07-03 19:45:37,875: 	 Instance is prod
+DEBUG 2017-07-03 19:45:37,875: 	 Server base url is cmsweb.cern.ch
+DEBUG 2017-07-03 19:45:37,875: 	 Command url /crabserver/prod/workflow
+DEBUG 2017-07-03 19:45:37,875: 	 Started submission
+DEBUG 2017-07-03 19:45:37,875: 	 Working on /afs/cern.ch/user/c/ciperez/OWNAnalyzer/CMSSW_8_0_13_patch1/src/triphoton/CRAB3-tutorial/crab_projects/crab_tutorial_May2015_MC_analysis
+DEBUG 2017-07-03 19:45:39,767: 	 Loading required information from the environment
+DEBUG 2017-07-03 19:45:39,767: 	 Found CMSSW_8_0_13_patch1 for slc6_amd64_gcc530 with base /afs/cern.ch/user/c/ciperez/OWNAnalyzer/CMSSW_8_0_13_patch1
+DEBUG 2017-07-03 19:45:39,768: 	 Loading required information from the environment
+DEBUG 2017-07-03 19:45:39,768: 	 Found CMSSW_8_0_13_patch1 for slc6_amd64_gcc530 with base /afs/cern.ch/user/c/ciperez/OWNAnalyzer/CMSSW_8_0_13_patch1
+DEBUG 2017-07-03 19:45:39,834: 	 UNIQUE NAME: tarUUID a9811c54-07f3-4334-b24c-e1b522043108 
+DEBUG 2017-07-03 19:45:39,835: 	 self.config: from WMCore.Configuration import Configuration
+config = Configuration()
+config.section_('General')
+config.General.transferLogs = True
+config.General.transferOutputs = True
+config.General.workArea = 'crab_projects'
+config.General.requestName = 'tutorial_May2015_MC_analysis'
+config.section_('JobType')
+config.JobType.psetName = 'pset_tutorial_analysis.py'
+config.JobType.pluginName = 'Analysis'
+config.section_('Data')
+config.Data.inputDataset = '/GenericTTbar/HC-CMSSW_5_3_1_START53_V5-v1/GEN-SIM-RECO'
+config.Data.outputDatasetTag = 'CRAB3_tutorial_May2015_MC_analysis'
+config.Data.publication = True
+config.Data.unitsPerJob = 10
+config.Data.inputDBS = 'global'
+config.Data.splitting = 'FileBased'
+config.Data.outLFNDirBase = '/store/user/ciperez/'
+config.section_('Site')
+config.Site.storageSite = 'T2_US_FNAL'
+config.section_('User')
+config.section_('Debug')
+
+DEBUG 2017-07-03 19:45:39,835: 	 self.config.JobType.psetName: pset_tutorial_analysis.py
+INFO 2017-07-03 19:45:39,835: 	 Importing CMSSW configuration pset_tutorial_analysis.py
+INFO 2017-07-03 19:45:40,542: 	 Finished importing CMSSW configuration pset_tutorial_analysis.py
+DEBUG 2017-07-03 19:45:40,542: 	 Writing CMSSW configuration to /afs/cern.ch/user/c/ciperez/OWNAnalyzer/CMSSW_8_0_13_patch1/src/triphoton/CRAB3-tutorial/crab_projects/crab_tutorial_May2015_MC_analysis/inputs/PSet.py
+DEBUG 2017-07-03 19:45:40,570: 	 The following EDM output files will be collected: ['output.root']
+DEBUG 2017-07-03 19:45:40,570: 	 The following TFile output files will be collected: []
+DEBUG 2017-07-03 19:45:40,570: 	 The following user output files will be collected: []
+DEBUG 2017-07-03 19:45:40,570: 	 Loading required information from the environment
+DEBUG 2017-07-03 19:45:40,570: 	 Found CMSSW_8_0_13_patch1 for slc6_amd64_gcc530 with base /afs/cern.ch/user/c/ciperez/OWNAnalyzer/CMSSW_8_0_13_patch1
+DEBUG 2017-07-03 19:45:40,570: 	 Making tarball in /afs/cern.ch/user/c/ciperez/OWNAnalyzer/CMSSW_8_0_13_patch1/src/triphoton/CRAB3-tutorial/crab_projects/crab_tutorial_May2015_MC_analysis/inputs/a9811c54-07f3-4334-b24c-e1b522043108default.tgz
+DEBUG 2017-07-03 19:45:41,432: 	 Checking directory /afs/cern.ch/user/c/ciperez/OWNAnalyzer/CMSSW_8_0_13_patch1/lib
+DEBUG 2017-07-03 19:45:41,432: 	 Adding directory /afs/cern.ch/user/c/ciperez/OWNAnalyzer/CMSSW_8_0_13_patch1/lib to tarball
+DEBUG 2017-07-03 19:45:41,681: 	 Checking directory /afs/cern.ch/user/c/ciperez/OWNAnalyzer/CMSSW_8_0_13_patch1/biglib
+DEBUG 2017-07-03 19:45:41,681: 	 Adding directory /afs/cern.ch/user/c/ciperez/OWNAnalyzer/CMSSW_8_0_13_patch1/biglib to tarball
+DEBUG 2017-07-03 19:45:41,686: 	 Checking directory /afs/cern.ch/user/c/ciperez/OWNAnalyzer/CMSSW_8_0_13_patch1/module
+DEBUG 2017-07-03 19:45:42,072: 	 Adding data directory /afs/cern.ch/user/c/ciperez/OWNAnalyzer/CMSSW_8_0_13_patch1/src/triphoton/CommonClasses/interface to tarball
+DEBUG 2017-07-03 19:45:42,120: 	 Uploading archive /afs/cern.ch/user/c/ciperez/OWNAnalyzer/CMSSW_8_0_13_patch1/src/triphoton/CRAB3-tutorial/crab_projects/crab_tutorial_May2015_MC_analysis/inputs/a9811c54-07f3-4334-b24c-e1b522043108default.tgz (234 KB) to the CRAB cache. Using URI https://cmsweb.cern.ch/crabcache
+DEBUG 2017-07-03 19:45:42,643: 	 Loading required information from the environment
+DEBUG 2017-07-03 19:45:42,644: 	 Found CMSSW_8_0_13_patch1 for slc6_amd64_gcc530 with base /afs/cern.ch/user/c/ciperez/OWNAnalyzer/CMSSW_8_0_13_patch1
+DEBUG 2017-07-03 19:45:42,644: 	 Making tarball in /afs/cern.ch/user/c/ciperez/OWNAnalyzer/CMSSW_8_0_13_patch1/src/triphoton/CRAB3-tutorial/crab_projects/crab_tutorial_May2015_MC_analysis/inputs/debugFiles.tgz
+DEBUG 2017-07-03 19:45:42,647: 	 Uploading archive /afs/cern.ch/user/c/ciperez/OWNAnalyzer/CMSSW_8_0_13_patch1/src/triphoton/CRAB3-tutorial/crab_projects/crab_tutorial_May2015_MC_analysis/inputs/debugFiles.tgz (0 KB) to the CRAB cache. Using URI https://cmsweb.cern.ch/crabcache
+DEBUG 2017-07-03 19:45:43,025: 	 Result uploading input files: 17b0128e57a4b452491730f11a4a4cc39b0ecaac58912ef9398875acfe5d339a.tar.gz 
+INFO 2017-07-03 19:45:43,025: 	 Sending the request to the server
+DEBUG 2017-07-03 19:45:43,026: 	 Submitting {'maxjobruntime': 1250, 'extrajdl': [], 'ignorelocality': 0, 'savelogsflag': 1, 'useparent': 0, 'asyncdest': 'T2_US_FNAL', 'algoargs': 10, 'cachefilename': '17b0128e57a4b452491730f11a4a4cc39b0ecaac58912ef9398875acfe5d339a.tar.gz', 'numcores': 1, 'addoutputfiles': [], 'generator': 'pythia', 'maxmemory': 2000, 'publishdbsurl': 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', 'priority': 10, 'jobsw': 'CMSSW_8_0_13_patch1', 'edmoutfiles': ['output.root'], 'userfiles': [], 'primarydataset': '', 'inputdata': '/GenericTTbar/HC-CMSSW_5_3_1_START53_V5-v1/GEN-SIM-RECO', 'lfn': '/store/user/ciperez/', 'dryrun': 0, 'workflow': 'crab_tutorial_May2015_MC_analysis', 'cacheurl': u'https://cmsweb.cern.ch/crabcache', 'nonprodsw': 0, 'tfileoutfiles': [], 'oneEventMode': 0, 'debugfilename': '80084d93646b8af64c01ee42c41393e4df470ea02cf5dacb781766610a1ca9f0.tar.gz', 'saveoutput': 1, 'publication': 1, 'jobarch': 'slc6_amd64_gcc530', 'totalunits': 0, 'splitalgo': 'FileBased', 'ignoreglobalblacklist': 0, 'nonvaliddata': 0, 'dbsurl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', 'publishgroupname': 0, 'jobtype': 'Analysis', 'publishname2': 'CRAB3_tutorial_May2015_MC_analysis'} 
+DEBUG 2017-07-03 19:45:43,026: 	 Encoded submit request: maxjobruntime=1250&ignorelocality=0&savelogsflag=1&useparent=0&asyncdest=T2_US_FNAL&algoargs=10&cachefilename=17b0128e57a4b452491730f11a4a4cc39b0ecaac58912ef9398875acfe5d339a.tar.gz&numcores=1&generator=pythia&maxmemory=2000&publishdbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fphys03%2FDBSWriter&priority=10&jobsw=CMSSW_8_0_13_patch1&primarydataset=&inputdata=%2FGenericTTbar%2FHC-CMSSW_5_3_1_START53_V5-v1%2FGEN-SIM-RECO&lfn=%2Fstore%2Fuser%2Fciperez%2F&dryrun=0&workflow=crab_tutorial_May2015_MC_analysis&cacheurl=https%3A%2F%2Fcmsweb.cern.ch%2Fcrabcache&nonprodsw=0&oneEventMode=0&debugfilename=80084d93646b8af64c01ee42c41393e4df470ea02cf5dacb781766610a1ca9f0.tar.gz&saveoutput=1&publication=1&jobarch=slc6_amd64_gcc530&totalunits=0&splitalgo=FileBased&ignoreglobalblacklist=0&nonvaliddata=0&dbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fglobal%2FDBSReader&publishgroupname=0&jobtype=Analysis&publishname2=CRAB3_tutorial_May2015_MC_analysis&edmoutfiles=output.root
+INFO 2017-07-03 19:45:43,623: 	 The server answered with an error.
+INFO 2017-07-03 19:45:43,623: 	 Server answered with: Invalid input parameter
+INFO 2017-07-03 19:45:43,623: 	 Reason is: The parameter T2_US_FNAL is not in the list of known CMS PhEDEx nodes.
+INFO 2017-07-03 19:45:43,623: 	 Error Id: 7fd116a609ea1d1c8e880f14fb36ff8f
+DEBUG 2017-07-03 19:45:43,623: 	 ERROR: Bad Request (400):  '<!DOCTYPE html PUBLIC
+"-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+    <title>400 Bad Request</title>
+    <style type="text/css">
+    #powered_by {
+        margin-top: 20px;
+        border-top: 2px solid black;
+        font-style: italic;
+    }
+
+    #traceback {
+        color: red;
+    }
+    </style>
+</head>
+    <body>
+        <h2>400 Bad Request</h2>
+        <p>Invalid input parameter</p>
+        <pre id="traceback"></pre>
+    <div id="powered_by">
+      <span>
+        Powered by <a href="http://www.cherrypy.org">CherryPy unknown</a>
+      </span>
+    </div>
+    </body>
+</html>
+'
+DEBUG 2017-07-03 19:45:43,623: 	 Command failed with URI: https://cmsweb.cern.ch/crabserver/prod/workflow
+DEBUG 2017-07-03 19:45:43,623: 	      Input data: maxjobruntime=1250&ignorelocality=0&savelogsflag=1&useparent=0&asyncdest=T2_US_FNAL&algoargs=10&cachefilename=17b0128e57a4b452491730f11a4a4cc39b0ecaac58912ef9398875acfe5d339a.tar.gz&numcores=1&generator=pythia&maxmemory=2000&publishdbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fphys03%2FDBSWriter&priority=10&jobsw=CMSSW_8_0_13_patch1&primarydataset=&inputdata=%2FGenericTTbar%2FHC-CMSSW_5_3_1_START53_V5-v1%2FGEN-SIM-RECO&lfn=%2Fstore%2Fuser%2Fciperez%2F&dryrun=0&workflow=crab_tutorial_May2015_MC_analysis&cacheurl=https%3A%2F%2Fcmsweb.cern.ch%2Fcrabcache&nonprodsw=0&oneEventMode=0&debugfilename=80084d93646b8af64c01ee42c41393e4df470ea02cf5dacb781766610a1ca9f0.tar.gz&saveoutput=1&publication=1&jobarch=slc6_amd64_gcc530&totalunits=0&splitalgo=FileBased&ignoreglobalblacklist=0&nonvaliddata=0&dbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fglobal%2FDBSReader&publishgroupname=0&jobtype=Analysis&publishname2=CRAB3_tutorial_May2015_MC_analysis&edmoutfiles=output.root
+DEBUG 2017-07-03 19:45:43,623: 	      Request headers: {'Content-Length': '734', 'X-Error-Http': '400', 'X-Rest-Time': '233751.774 us', 'Server': 'CherryPy/unknown', 'Connection': 'close', 'X-Error-Detail': 'Invalid input parameter', 'CMS-Server-Time': 'D=287898 t=1499103943333181', 'X-Rest-Status': '302', 'Date': 'Mon, 03 Jul 2017 17:45:43 GMT', 'Content-Type': 'text/html;charset=utf-8', 'X-Error-Info': 'The parameter T2_US_FNAL is not in the list of known CMS PhEDEx nodes.', 'X-Error-Id': '7fd116a609ea1d1c8e880f14fb36ff8f'}
+ERROR 2017-07-03 19:45:43,623: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1706/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1706/bin/crab", line 148, in __call__
+    self.cmd()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1706/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 124, in __call__
+    dictresult, status, reason = server.put(self.uri, data = self.configreq_encoded)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1706/lib/python2.7/site-packages/RESTInteractions.py", line 91, in put
+    return self.makeRequest(uri = uri, data = data, verb = 'PUT')
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1706/lib/python2.7/site-packages/RESTInteractions.py", line 128, in makeRequest
+    capath=caCertPath)#, verbose=True)# for debug
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1706/lib/python2.7/site-packages/WMCore/Services/pycurl_manager.py", line 207, in request
+    raise exc
+HTTPException: url=https://cmsweb.cern.ch/crabserver/prod/workflow, code=400, reason=Bad Request, headers={'Content-Length': '734', 'X-Error-Http': '400', 'X-Rest-Time': '233751.774 us', 'Server': 'CherryPy/unknown', 'Connection': 'close', 'X-Error-Detail': 'Invalid input parameter', 'CMS-Server-Time': 'D=287898 t=1499103943333181', 'X-Rest-Status': '302', 'Date': 'Mon, 03 Jul 2017 17:45:43 GMT', 'Content-Type': 'text/html;charset=utf-8', 'X-Error-Info': 'The parameter T2_US_FNAL is not in the list of known CMS PhEDEx nodes.', 'X-Error-Id': '7fd116a609ea1d1c8e880f14fb36ff8f'}
+INFO 2017-07-03 19:45:43,735: 	 Log file is /afs/cern.ch/user/c/ciperez/OWNAnalyzer/CMSSW_8_0_13_patch1/src/triphoton/CRAB3-tutorial/crab_projects/crab_tutorial_May2015_MC_analysis/crab.log
